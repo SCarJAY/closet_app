@@ -10,6 +10,8 @@ class ItemsController < ApplicationController
   # GET /items/1
   # GET /items/1.json
   def show
+    @user = User.find_by(id: params[:user_id])
+    @item = @user.items.find(params[:id])
   end
 
   # GET /items/new
@@ -19,6 +21,8 @@ class ItemsController < ApplicationController
 
   # GET /items/1/edit
   def edit
+    @user = User.find_by(id: params[:user_id])
+    @item = @user.items.find(params[:id])
   end
 
   # POST /items
@@ -41,9 +45,10 @@ class ItemsController < ApplicationController
   # PATCH/PUT /items/1.json
   def update
     respond_to do |format|
-      if @user.item.update(item_params)
-        format.html { redirect_to @user.item, notice: 'Item was successfully updated.' }
-        format.json { render :show, status: :ok, location: @item }
+      if @item.update(item_params)
+        format.html { redirect_to @item, notice: 'Item was successfully updated.' }
+        format.json { render :show, status: :ok, location: @user_item_path }
+
       else
         format.html { render :edit }
         format.json { render json: @user.item.errors, status: :unprocessable_entity }
@@ -64,8 +69,10 @@ class ItemsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_item
-      @user = User.find_by(id: params[:user_id])
-      @user.item = Item.find(params[:id])
+
+       @user = User.find_by(id: params[:user_id])
+       @item = @user.items.find(params[:id])
+
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

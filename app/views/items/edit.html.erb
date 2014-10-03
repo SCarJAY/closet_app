@@ -2,5 +2,7 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @item %> |
-<%= link_to 'Back', edit_user_item_path %>
+
+<%= link_to 'Show', user_item_path(@item.user_id, @item.id) %> |
+<%= link_to 'Back', user_items_path %>
+
