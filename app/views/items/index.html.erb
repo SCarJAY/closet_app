@@ -16,7 +16,7 @@
   </thead>
 
   <tbody>
-    <% @items.each do |item| %>
+    <% @user.items.each do |item| %>
       <tr>
         <td><%= item.img_url %></td>
         <td><%= item.name %></td>
@@ -25,10 +25,7 @@
         <td><%= item.size %></td>
         <td><%= item.brand %></td>
         <td><%= item.purchased_from %></td>
-        <td><%= item.user %></td>
-        <td><%= link_to 'Show', item %></td>
-        <td><%= link_to 'Edit', edit_item_path(item) %></td>
-        <td><%= link_to 'Destroy', item, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= link_to 'Show', user_item_path(@id) %></td>
       </tr>
     <% end %>
   </tbody>
@@ -36,4 +33,4 @@
 
 <br>
 
-<%= link_to 'New Item', new_item_path %>
+<%= link_to 'New Item', new_user_item_path %>
