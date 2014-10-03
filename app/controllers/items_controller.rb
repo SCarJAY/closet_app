@@ -21,6 +21,8 @@ class ItemsController < ApplicationController
 
   # GET /items/1/edit
   def edit
+    @user = User.find_by(id: params[:user_id])
+    @item = @user.items.find(params[:id])
   end
 
   # POST /items
@@ -45,7 +47,7 @@ class ItemsController < ApplicationController
     respond_to do |format|
       if @item.update(item_params)
         format.html { redirect_to @item, notice: 'Item was successfully updated.' }
-        format.json { render :show, status: :ok, location: @item }
+        format.json { render :show, status: :ok, location: @user_item_path }
       else
         format.html { render :edit }
         format.json { render json: @item.errors, status: :unprocessable_entity }
@@ -66,7 +68,8 @@ class ItemsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_item
-      @item = Item.find(params[:id])
+       @user = User.find_by(id: params[:user_id])
+       @item = @user.items.find(params[:id])
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
