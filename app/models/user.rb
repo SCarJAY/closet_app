@@ -1,7 +1,6 @@
 class User < ActiveRecord::Base
   has_many :items
   has_many :outfits
-
   validates :name, :email, :city, :state, presence: true
   validates :email, uniqueness: true
   has_secure_password
@@ -30,4 +29,5 @@ class User < ActiveRecord::Base
     when 'client'   then 1
     else 0; end
   end
+
 end
