@@ -30,6 +30,7 @@ ActiveRecord::Schema.define(version: 20141003153247) do
     t.string   "color",          null: false
     t.string   "size",           null: false
     t.string   "brand"
+    t.string   "dress_code"
     t.string   "purchased_from"
     t.integer  "user_id"
     t.datetime "created_at"

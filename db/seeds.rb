@@ -6,9 +6,46 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-# User.create(name: "adesuwau", email: "ade@ga.co", password: ihaertga, city: "New York", state: "NY")
-# Item.create(img_url: "http://assets.matchesfashion.com/products/WOGJ4D860002BKM_1_large.jpg", name: "Mosaic Print Dress", category: "dress", color: "multi", brand: "Givenchy", purchased_from: "Bergdorf's")
-# Item.create(img_url: "http://www.stylebop.com/grafic/360/640x806/214/214524/214524_01.jpg", name: "Leather Sweats", category: "pants", color: "black", brand: "3.1 Phillip Lim", purchased_from: "Shopbop")
-# Item.create(img_url: "http://resources.shopstyle.com/sim/a1/ac/a1ac09e0323a9eeb832efc16dcfcb4eb/h-m-draped-wrap-style-blouse-burgundy-ladies.jpg", name: "Plum Drapey Blouse", category: "top", color: "purple", brand: "H&M", purchased_from: "H&M")
-# Item.create(img_url: "http://assets.matchesfashion.com/products/WOGJ4D860002BKM_1_large.jpg", name: "Tribal Print Dress", category: "dress", color: "multi", brand: "Givenchy", purchased_from: "Bergdorf's")
-# Item.create(img_url: "http://assets.matchesfashion.com/products/WOGJ4D860002BKM_1_large.jpg", name: "Tribal Print Dress", category: "dress", color: "multi", brand: "Givenchy", purchased_from: "Bergdorf's")
+u1 = User.create(
+  name: "carrie",
+  email: "carrie@ga.co",
+  password: "lovesfood",
+  city: "New York",
+  state: "NY")
+
+cx_item1 = Item.create(
+  img_url: "http://instagram.com/p/p55_8EyNKw/",
+  name: "pug shirt",
+  category: "top",
+  dress_code: "casual",
+  color: "multi",
+  size: "4")
+
+cx_item2 = Item.create(
+  img_url: "http://static.zara.net/photos//2014/I/0/1/p/5315/152/800/2/w/560/5315152800_2_1_1.jpg?timestamp=1411573519307",
+  name: "lace skirt",
+  category: "bottom",
+  color: "black",
+  dress_code: "casual",
+  size: "4",
+  brand: "zara",
+  purchased_from: "zara")
+
+cx_item3 = Item.create(
+  img_url: "http://static.zara.net/photos//2014/I/0/1/p/5039/150/401/2/w/1920/5039150401_2_1_1.jpg?timestamp=1411491305060",
+  name: "mermaid dress",
+  category: "one_piece",
+  dress_code: "night out",
+  color: "black",
+  size: "4",
+  brand: "zara",
+  purchased_from: "zara")
+
+
+cx_item1.user_id = u1.id
+cx_item2.user_id = u1.id
+cx_item3.user_id = u1.id
+
+cx_item1.save
+cx_item2.save
+cx_item3.save

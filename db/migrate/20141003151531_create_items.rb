@@ -7,6 +7,7 @@ class CreateItems < ActiveRecord::Migration
       t.string :color, :null => false
       t.string :size, :null => false
       t.string :brand
+      t.string :dress_code
       t.string :purchased_from
       t.references :user, index: true
 
