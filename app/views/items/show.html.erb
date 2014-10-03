@@ -2,7 +2,7 @@
 
 <p>
   <strong>Img url:</strong>
-  <%= @item.img_url %>
+  <img src="<%= @item.img_url %>">
 </p>
 
 <p>
@@ -35,10 +35,6 @@
   <%= @item.purchased_from %>
 </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @item.user %>
-</p>
 
-<%= link_to 'Edit', edit_item_path(@item) %> |
-<%= link_to 'Back', items_path %>
+
+

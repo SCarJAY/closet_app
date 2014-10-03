@@ -10,7 +10,8 @@ class ItemsController < ApplicationController
   # GET /items/1
   # GET /items/1.json
   def show
-    @user_id = params[:user_id]
+    @user = User.find_by(id: params[:user_id])
+    @item = @user.items.find(params[:id])
   end
 
   # GET /items/new
