@@ -16,7 +16,7 @@ class ItemsController < ApplicationController
 
   # GET /items/new
   def new
-    @item = Item.new
+    @user = Item.new
   end
 
   # GET /items/1/edit
@@ -28,15 +28,21 @@ class ItemsController < ApplicationController
   # POST /items
   # POST /items.json
   def create
-    @item = Item.new(item_params)
+    @user.item = Item.new(item_params)
 
     respond_to do |format|
+<<<<<<< HEAD
       if @item.save
         format.html { redirect_to @item, notice: 'Item was successfully created.' }
         format.json { render :show, status: :created, location: @user_items_path }
+=======
+      if @user.item.save
+        format.html { redirect_to @user.item, notice: 'Item was successfully created.' }
+        format.json { render :show, status: :created, location: @item }
+>>>>>>> b9cc1a0fcd7b3c6b49076b51b39d93504eba6bcd
       else
         format.html { render :new }
-        format.json { render json: @item.errors, status: :unprocessable_entity }
+        format.json { render json: @user.item.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -48,9 +54,10 @@ class ItemsController < ApplicationController
       if @item.update(item_params)
         format.html { redirect_to @item, notice: 'Item was successfully updated.' }
         format.json { render :show, status: :ok, location: @user_item_path }
+
       else
         format.html { render :edit }
-        format.json { render json: @item.errors, status: :unprocessable_entity }
+        format.json { render json: @user.item.errors, status: :unprocessable_entity }
       end
     end
   end
@@ -58,7 +65,7 @@ class ItemsController < ApplicationController
   # DELETE /items/1
   # DELETE /items/1.json
   def destroy
-    @item.destroy
+    @user.item.destroy
     respond_to do |format|
       format.html { redirect_to items_url, notice: 'Item was successfully destroyed.' }
       format.json { head :no_content }
@@ -68,8 +75,10 @@ class ItemsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_item
+
        @user = User.find_by(id: params[:user_id])
        @item = @user.items.find(params[:id])
+
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
