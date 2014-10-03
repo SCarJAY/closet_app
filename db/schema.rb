@@ -39,12 +39,7 @@ ActiveRecord::Schema.define(version: 20141003153247) do
   add_index "items", ["user_id"], name: "index_items_on_user_id"
 
   create_table "outfits", force: true do |t|
-    t.string   "dress_code", null: false
-    t.integer  "top"
-    t.integer  "bottom"
-    t.integer  "one_piece"
-    t.integer  "shoes",      null: false
-    t.integer  "accessory",  null: false
+    t.string   "name",       null: false
     t.integer  "user_id"
     t.datetime "created_at"
     t.datetime "updated_at"
