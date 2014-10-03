@@ -1,0 +1,39 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Dress code:</strong>
+  <%= @outfit.dress_code %>
+</p>
+
+<p>
+  <strong>Top:</strong>
+  <%= @outfit.top %>
+</p>
+
+<p>
+  <strong>Bottom:</strong>
+  <%= @outfit.bottom %>
+</p>
+
+<p>
+  <strong>One piece:</strong>
+  <%= @outfit.one_piece %>
+</p>
+
+<p>
+  <strong>Shoes:</strong>
+  <%= @outfit.shoes %>
+</p>
+
+<p>
+  <strong>Accessory:</strong>
+  <%= @outfit.accessory %>
+</p>
+
+<p>
+  <strong>User:</strong>
+  <%= @outfit.user %>
+</p>
+
+<%= link_to 'Edit', edit_outfit_path(@outfit) %> |
+<%= link_to 'Back', outfits_path %>
