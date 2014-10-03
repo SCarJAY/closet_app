@@ -4,12 +4,13 @@ class ItemsController < ApplicationController
   # GET /items
   # GET /items.json
   def index
-    @items = Item.all
+    @user = User.find_by(id: params[:user_id])
   end
 
   # GET /items/1
   # GET /items/1.json
   def show
+    @user_id = params[:user_id]
   end
 
   # GET /items/new
