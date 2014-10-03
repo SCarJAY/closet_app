@@ -1,4 +1,15 @@
 Rails.application.routes.draw do
+
+  resources :session, only: [:new, :create, :destroy]
+
+  resources :users do
+    resources :items
+  end
+
+  resources :users do
+        resources :outfits, only: [:index, :create, :show, :destroy]
+  end
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
