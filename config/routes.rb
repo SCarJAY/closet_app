@@ -7,7 +7,7 @@ Rails.application.routes.draw do
   end
 
   resources :users do
-        resources :outfits, only: [:index, :create, :show, :destroy]
+    resources :outfits, only: [:index, :create, :show, :destroy]
   end
 
   # The priority is based upon order of creation: first created -> highest priority.
@@ -20,7 +20,10 @@ Rails.application.routes.draw do
   #   get 'products/:id' => 'catalog#view'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
-  #   get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
+    # get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
+  get 'users/:id/dashboard' => 'welcome#dashboard', as: :dashboard
+
+  get 'users/:user_id/outfits/generate' => 'outfits#generate', as: :generate
 
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products

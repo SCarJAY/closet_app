@@ -1,6 +1,10 @@
 class OutfitsController < ApplicationController
   before_action :set_outfit, only: [:show, :edit, :update, :destroy]
 
+  def generate
+
+  end
+
   # GET /outfits
   # GET /outfits.json
   def index
@@ -60,6 +64,7 @@ class OutfitsController < ApplicationController
       format.json { head :no_content }
     end
   end
+
 
   private
     # Use callbacks to share common setup or constraints between actions.
