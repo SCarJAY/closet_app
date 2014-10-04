@@ -2,38 +2,36 @@
 
 <p>
   <strong>Dress code:</strong>
-  <%= @outfit.dress_code %>
+  <%= @outfit["dress_code"] %>
 </p>
-
+ <% if @outfit.has_key?("top") %>
 <p>
   <strong>Top:</strong>
-  <%= @outfit.top %>
+  <%= @outfit["top"] %>
 </p>
 
 <p>
   <strong>Bottom:</strong>
-  <%= @outfit.bottom %>
+  <%= @outfit["bottom"] %>
 </p>
-
+<% else %>
 <p>
   <strong>One piece:</strong>
-  <%= @outfit.one_piece %>
+  <%= @outfit["one_piece"] %>
 </p>
-
+<% end %>
 <p>
   <strong>Shoes:</strong>
-  <%= @outfit.shoes %>
+  <%= @outfit["shoes"]%>
 </p>
 
 <p>
   <strong>Accessory:</strong>
-  <%= @outfit.accessory %>
+  <%= @outfit["accessory"] %>
 </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @outfit.user %>
-</p>
 
 <%= link_to 'Edit', edit_outfit_path(@outfit) %> |
 <%= link_to 'Back', outfits_path %>
+
+
