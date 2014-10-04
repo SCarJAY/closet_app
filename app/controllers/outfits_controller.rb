@@ -2,7 +2,7 @@ class OutfitsController < ApplicationController
   before_action :set_outfit, only: [:show, :edit, :update, :destroy]
 
   def generate
-
+    @outfit = Outfit.generate
   end
 
   # GET /outfits
@@ -14,7 +14,6 @@ class OutfitsController < ApplicationController
   # GET /outfits/1
   # GET /outfits/1.json
   def show
-    @outfit
   end
 
   # GET /outfits/new
@@ -70,7 +69,7 @@ class OutfitsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_outfit
-      @outfit = Outfit.generate
+
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

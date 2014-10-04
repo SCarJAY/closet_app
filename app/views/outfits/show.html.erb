@@ -7,31 +7,29 @@
  <% if @outfit.has_key?("top") %>
 <p>
   <strong>Top:</strong>
-  <%= @outfit["top"] %>
+  <img src="<%= @outfit["top"][:img_url] %>" />
 </p>
 
 <p>
   <strong>Bottom:</strong>
-  <%= @outfit["bottom"] %>
+  <img src="<%= @outfit["bottom"][:img_url] %>" />
 </p>
 <% else %>
 <p>
   <strong>One piece:</strong>
-  <%= @outfit["one_piece"] %>
+  <img src="<%= @outfit["one_piece"][:img_url] %>" />
 </p>
 <% end %>
 <p>
   <strong>Shoes:</strong>
-  <%= @outfit["shoes"]%>
+  <img src="<%= @outfit["shoes"][:img_url] %>" />
 </p>
 
 <p>
   <strong>Accessory:</strong>
-  <%= @outfit["accessory"] %>
+  <img src="<%= @outfit["accessory"][:img_url] %>" />
 </p>
 
 
-<%= link_to 'Edit', edit_outfit_path(@outfit) %> |
-<%= link_to 'Back', outfits_path %>
 
 

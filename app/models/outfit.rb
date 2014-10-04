@@ -20,12 +20,3 @@ class Outfit < ActiveRecord::Base
   end
 
 end
-# if random == 1
-#       top = outfit.push(@user.items.where(category: "top").sample)
-#       bottom = outfit.push(@user.items.where(category: "bottom").sample)
-#     else
-#       one_piece = outfit.push(@user.items.where(category: "one piece").sample)
-#     end
-#     accessory = outfit.push(@user.items.where(category: "accessory").sample
-#     shoes = outfit.push(@user.items.where(category: "shoes").sample)
-#     outfit
