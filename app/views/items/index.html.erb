@@ -1,0 +1,38 @@
+<h1>Listing items</h1>
+
+<table>
+  <thead>
+    <tr>
+      <th>Img url</th>
+      <th>Name</th>
+      <th>Category</th>
+      <th>Color</th>
+      <th>Size</th>
+      <th>Brand</th>
+      <th>Purchased from</th>
+      <th>Dress Code</th>
+      <th>View</th>
+      <th colspan="3"></th>
+    </tr>
+  </thead>
+
+  <tbody>
+    <% @user.items.each do |item| %>
+      <tr>
+        <td><%= item.img_url %></td>
+        <td><%= item.name %></td>
+        <td><%= item.category %></td>
+        <td><%= item.color %></td>
+        <td><%= item.size %></td>
+        <td><%= item.brand %></td>
+        <td><%= item.dress_code %></td>
+        <td><%= item.purchased_from %></td>
+        <td><%= link_to 'Show', user_item_path(item.user_id, item.id) %></td>
+      </tr>
+    <% end %>
+  </tbody>
+</table>
+
+<br>
+
+<%= link_to 'New Item', new_user_item_path %>
