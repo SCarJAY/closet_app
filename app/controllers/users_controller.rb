@@ -1,5 +1,9 @@
 class UsersController < ApplicationController
-  before_action :set_user, only: [:show, :edit, :update, :destroy]
+  before_action :authenticate,            except: [:new, :create]
+  before_action :load_user,               except: [:index, :new, :create]
+  before_action :authorize_admin_only,    only:   :index
+  before_action :authorize_user_only,     only:   :show
+  before_action :authorize_user_or_admin, except: [:index, :show, :new, :create]
 
   def dashboard
   end
@@ -27,16 +31,13 @@ class UsersController < ApplicationController
   # POST /users
   # POST /users.json
   def create
-    @user = User.new(user_params)
+    @user = User.new({role: 'client'}.merge(user_params))
 
-    respond_to do |format|
-      if @user.save
-        format.html { redirect_to @user, notice: 'Item was successfully created.' }
-        format.json { render :show, status: :created, location: @user }
-      else
-        format.html { render :new }
-        format.json { render json: @user.errors, status: :unprocessable_entity }
-      end
+    if @user.save
+      log_in(@user)
+      redirect_to user_path(@user)
+    else
+      render :new
     end
   end
 
@@ -97,5 +98,28 @@ class UsersController < ApplicationController
       :password,
       :password_confirmation
     )
+  end
+
+  def load_user
+    @user = User.find_by(id: params[:id])
+    redirect_to root_path if !@user
+  end
+
+  def authorize_admin_only
+    unless current_user.is_admin?
+      redirect_to user_path(current_user)
+    end
+  end
+
+  def authorize_user_only
+    unless current_user == @user
+      redirect_to user_path(current_user)
+    end
+  end
+
+  def authorize_user_or_admin
+    unless current_user == @user || current_user.is_admin?
+      redirect_to user_path(current_user)
+    end
   end
 end

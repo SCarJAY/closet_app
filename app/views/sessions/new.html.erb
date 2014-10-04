@@ -1,0 +1,16 @@
+<div class="front-matter">
+  <h1>Welcome to Your Closet</h1>
+  <p>Login</p>
+  <div class="login">
+    <%= form_tag(session_path) do %>
+      <%= label_tag(:email) %><br/>
+      <%= text_field_tag(:email) %><br/>
+      <%= label_tag(:password) %><br/>
+      <%= password_field_tag(:password) %><br/>
+      <%= submit_tag('Login') %>
+    <% end %>
+    <p style="color: red"><%= flash[:error] %></p>
+    <p style="color: green;"><strong><%= flash[:notice] %></strong><p>
+  </div>
+  <p><%= link_to('Sign up', new_user_path) %></p>
+</div>
