@@ -29,5 +29,4 @@ class User < ActiveRecord::Base
     when 'client'   then 1
     else 0; end
   end
-
 end

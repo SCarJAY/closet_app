@@ -10,4 +10,5 @@ RSpec.describe User, :type => :model do
   it { should have_many(:items) }
   it { should have_many(:outfits) }
   it { should have_secure_password }
+
 end
