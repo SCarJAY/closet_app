@@ -1,6 +1,10 @@
 class OutfitsController < ApplicationController
   before_action :set_outfit, only: [:show, :edit, :update, :destroy]
 
+  def generate
+    @outfit
+  end
+
   # GET /outfits
   # GET /outfits.json
   def index
@@ -64,7 +68,7 @@ class OutfitsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_outfit
-      @outfit = Outfit.find(params[:id])
+      @outfit = Outfit.generate
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
