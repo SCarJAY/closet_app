@@ -1,4 +1,5 @@
 
+<<<<<<< HEAD
     # This file should contain all the record creation needed to seed the database with its default values.
     # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
     #
@@ -186,6 +187,46 @@ jf_item2 = Item.create(
   name: "FLoral Dress",
   category: "one-piece",
   dress_code: "casual",
+  color: "white",
+  size: "M",
+  brand: "Rag & Bone",
+  purchased_from: "Nordstrom's")
+
+aa_item5 = Item.create(
+  img_url: "http://4.bp.blogspot.com/-S29zGciW_ow/T8U8mQ-8ACI/AAAAAAAAAhM/JFCUXmxruYM/s1600/DSCN0186.jpg",
+  name: "Funky shoes",
+  category: "shoes",
+  dress_code: "night out",
+  color: "black",
+  size: "10",
+  brand: "xxx Campbell",
+  purchased_from: "Shopbop")
+
+aa_item1.user_id = user_aa.id
+aa_item1.save
+aa_item2.user_id = user_aa.id
+aa_item2.save
+aa_item3.user_id = user_aa.id
+aa_item3.save
+aa_item4.user_id = user_aa.id
+aa_item4.save
+aa_item5.user_id = user_aa.id
+aa_item5.save
+
+# Yinan's
+user_ys = User.create(
+  name: "yinansong",
+  email: "yinan.e.song@gmail.com",
+  password: "sesameopen",
+  city: "New Haven",
+  state: "CT",
+  role: "client")
+
+ys_item1 = Item.create(
+  img_url: "http://instagram.com/p/tnXdKpOIiY",
+  name: "Manolo Blahnik Suede Heels",
+  category: "shoes",
+  dress_code: "night out",
   color: "brown",
   size: "M",
   brand: "",
@@ -217,4 +258,3 @@ jf_item4 = Item.create(
     jf_item3.save
     jf_item4.user_id = jf.id
     jf_item4.save
-

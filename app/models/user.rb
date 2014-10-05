@@ -1,8 +1,22 @@
+# == Schema Information
+#
+# Table name: users
+#
+#  id              :integer          not null, primary key
+#  name            :string(255)      not null
+#  email           :string(255)      not null
+#  password_digest :string(255)      not null
+#  city            :string(255)      not null
+#  state           :string(255)      not null
+#  role            :string(255)
+#  created_at      :datetime
+#  updated_at      :datetime
+#
+
 class User < ActiveRecord::Base
   has_many :items
   has_many :outfits
-
-  validates :name, :email, :city, :state, presence: true
+  validates :name, :email, :city, :state, :password_digest, presence: true
   validates :email, uniqueness: true
   has_secure_password
 
