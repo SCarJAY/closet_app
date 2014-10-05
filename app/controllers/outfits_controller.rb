@@ -1,7 +1,6 @@
 class OutfitsController < ApplicationController
   before_action :set_outfit, only: [:show, :edit, :update, :destroy]
 
-
   # GET /outfits
   # GET /outfits.json
   def index
@@ -62,7 +61,10 @@ class OutfitsController < ApplicationController
     end
   end
 
+
+
   private
+
     def set_outfit
       @user = User.find_by(id: session[:user_id])
       @outfit = {}
