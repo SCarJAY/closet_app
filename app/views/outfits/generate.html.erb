@@ -1,1 +1,32 @@
 generate
+<p id="notice"><%= notice %></p>
+
+ <% if @outfit.has_key?("top") %>
+<p>
+  <strong>Top:</strong>
+  <img src="<%= @outfit["top"][:img_url] %>" />
+</p>
+
+<p>
+  <strong>Bottom:</strong>
+  <img src="<%= @outfit["bottom"][:img_url] %>" />
+</p>
+<% else %>
+<p>
+  <strong>One piece:</strong>
+  <img src="<%= @outfit["one_piece"][:img_url] %>" />
+</p>
+<% end %>
+<p>
+  <strong>Shoes:</strong>
+  <img src="<%= @outfit["shoes"][:img_url] %>" />
+</p>
+
+<p>
+  <strong>Accessory:</strong>
+  <img src="<%= @outfit["accessory"][:img_url] %>" />
+</p>
+
+
+
+
