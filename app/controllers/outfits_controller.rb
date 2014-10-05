@@ -68,6 +68,7 @@ class OutfitsController < ApplicationController
   private
     # Use callbacks to share common setup or constraints between actions.
     def set_outfit
+      @user = User.find_by(id: params["user_id"])
       @outfit = Outfit.generate
     end
 
