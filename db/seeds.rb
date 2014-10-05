@@ -87,7 +87,7 @@ user_ys = User.create(
   role: "client")
 
 ys_item1 = Item.create(
-  img_url: "http://instagram.com/p/tnXdKpOIiY",
+  img_url: "https://img0.etsystatic.com/032/1/8206026/il_570xN.571915094_gva4.jpg",
   name: "Manolo Blahnik Suede Heels",
   category: "shoes",
   dress_code: "night out",
@@ -96,8 +96,18 @@ ys_item1 = Item.create(
   brand: "Manolo Blahnik",
   purchased_from: "Macy's")
 
+ys_item2 = Item.create(
+  img_url: "http://s7d4.scene7.com/is/image/BonTon/479723?$ibm_large$",
+  name: "Black Square on Beige",
+  category: "one piece",
+  dress_code: "work",
+  color: "black",
+  size: "8",
+  brand: "Calvin Klein",
+  purchased_from: "Calvin Klein")
+
 ys_item3 = Item.create(
-  img_url: "http://instagram.com/p/tFMF9BgUau",
+  img_url: "http://www.uuclothing.com/wp-content/uploads/2012/08/16/women-dress-20120816-66.jpg",
   name: "Silk Layered Dress",
   category: "one piece",
   dress_code: "night out",
@@ -107,7 +117,7 @@ ys_item3 = Item.create(
   purchased_from: "H&M")
 
 ys_item4 = Item.create(
-  img_url: "http://instagram.com/p/gYFPtKoILR",
+  img_url: "http://m.benbridge.com/shop/images/T/11053980.jpg",
   name: "Knot Necklace",
   category: "accessory",
   dress_code: "night out",
@@ -116,12 +126,26 @@ ys_item4 = Item.create(
   brand: "unknown",
   purchased_from: "MyNameNecklace.com")
 
+ys_item5 = Item.create(
+  img_url: "http://static.heels.com/images/shoes/outside_view/large/ZMAN883_OUT_LG.jpg",
+  name: "Littel Back Checkered Heels",
+  category: "shoes",
+  dress_code: "work",
+  color: "black",
+  size: "8",
+  brand: "unknown",
+  purchased_from: "Nordstrom's")
+
 ys_item1.user_id = user_ys.id
 ys_item1.save
+ys_item2.user_id = user_ys.id
+ys_item2.save
 ys_item3.user_id = user_ys.id
 ys_item3.save
 ys_item4.user_id = user_ys.id
 ys_item4.save
+ys_item5.user_id = user_ys.id
+ys_item5.save
 
 cx = User.create(
 name: "carrie",
