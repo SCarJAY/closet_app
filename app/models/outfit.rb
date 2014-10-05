@@ -16,7 +16,7 @@ class Outfit < ActiveRecord::Base
   validates_presence_of :name
 
   def self.generate
-    @user = User.find_by(id: 18) #TODO params not working? need sessions
+    @user = User.find_by(id: @user.id) #TODO params not working? need sessions
     outfit = {}
     random = rand(1..2)
     if random == 1
