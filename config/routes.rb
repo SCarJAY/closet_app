@@ -11,8 +11,13 @@ Rails.application.routes.draw do
   end
 
   resources :users do
-    resources :outfits, only: [:index, :create, :show, :destroy]
+    resources :outfits, only: [:index, :create, :destroy] do
+      collection do
+        match 'generate', :via => [:get, :post]
+      end
+    end
   end
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

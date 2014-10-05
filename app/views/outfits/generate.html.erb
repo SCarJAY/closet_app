@@ -1,1 +1,17 @@
-generate
+<% if !@selected_dress_code %>
+  <%= form_tag(generate_path, method: "get") do %>
+    <%= select_tag(:dress_code, options_for_select(@dress_codes_uniq)) %>
+    <%= submit_tag("Let's Go!") %>
+  <% end %>
+<% else %>
+  <% if @new_outfit.has_key?("top") %>
+    <strong>Top:</strong><img src="<%= @new_outfit["top"][:img_url] %>" /><br>
+    <strong>Bottom:</strong><img src="<%= @new_outfit["bottom"][:img_url] %>" /><br>
+  <% else %>
+    <strong>One piece:</strong><img src="<%= @new_outfit["one_piece"][:img_url] %>" /><br>
+  <% end %>
+  <strong>Shoes:</strong><img src="<%= @new_outfit["shoes"][:img_url] %>" /><br>
+  <strong>Accessory:</strong><img src="<%= @new_outfit["accessory"][:img_url] %>" /><br>
+  <%= link_to("Favorite", ) %>
+  <%= link_to("Show Me Another", generate_path) %>
+<% end %>
