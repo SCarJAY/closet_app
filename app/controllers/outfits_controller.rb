@@ -1,10 +1,6 @@
 class OutfitsController < ApplicationController
   before_action :set_outfit, only: [:show, :edit, :update, :destroy]
 
-  def generate
-    @outfit
-  end
-
   # GET /outfits
   # GET /outfits.json
   def index
@@ -65,14 +61,33 @@ class OutfitsController < ApplicationController
     end
   end
 
+
+
   private
+    def generate
+      @user = User.find_by(id: session[:user_id])
+      # binding.pry
+      outfit = {}
+      random = rand(1..2)
+      if random == 1
+        outfit["top"] = @user.items.where(category: "top").sample
+        outfit["bottom"] = @user.items.where(category: "bottom").sample
+      else
+        outfit["one_piece"] = @user.items.where(category: "one piece").sample
+      end
+      outfit["accessory"] = @user.items.where(category: "accessory").sample
+      outfit["shoes"] = @user.items.where(category: "shoes").sample
+      outfit
+    end
+
     # Use callbacks to share common setup or constraints between actions.
     def set_outfit
-      @outfit = Outfit.generate
+      @outfit = generate
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def outfit_params
       params.require(:outfit).permit(:dress_code, :top, :bottom, :one_piece, :shoes, :accessory, :user_id)
     end
+
 end

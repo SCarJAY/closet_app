@@ -3,7 +3,7 @@ Rails.application.routes.draw do
   root 'welcome#index'
 
   get "/login" => "sessions#new"
-  get "/logout" => "sessions#delete"
+
   resource  :session, only: [:create, :destroy]
 
   resources :users do

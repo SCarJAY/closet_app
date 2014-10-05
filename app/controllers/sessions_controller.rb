@@ -13,8 +13,8 @@ class SessionsController < ApplicationController
     end
   end
 
-  def delete
+  def destroy
     log_out!
-    redirect_to(root_path)
+    redirect_to(login_path)
   end
 end
