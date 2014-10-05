@@ -1,3 +1,4 @@
+<%= render 'layouts/header' %>
 <h1>Listing users</h1>
 
 <table>
@@ -28,5 +29,6 @@
 </table>
 
 <br>
+<p><span><%= link_to('Back to Home', user_path(current_user)) %></span></p>
 
 <%= link_to 'New User', new_user_path %>

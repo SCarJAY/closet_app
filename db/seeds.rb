@@ -13,7 +13,8 @@ user_aa = User.create(
   email: "ade@ga.co",
   password: "ihaertga",
   city: "New York",
-  state: "NY")
+  state: "NY",
+  role: "client")
 
 aa_item1 = Item.create(
   img_url: "http://assets.matchesfashion.com/products/WOGJ4D860002BKM_1_large.jpg",
@@ -82,7 +83,8 @@ user_ys = User.create(
   email: "yinan.e.song@gmail.com",
   password: "sesameopen",
   city: "New Haven",
-  state: "CT")
+  state: "CT",
+  role: "client")
 
 ys_item1 = Item.create(
   img_url: "http://instagram.com/p/tnXdKpOIiY",
@@ -126,7 +128,8 @@ name: "carrie",
 email: "carrie@ga.co",
 password: "lovesfood",
 city: "New York",
-state: "NY")
+state: "NY",
+role: "admin")
 
 cx_item1 = Item.create(
 img_url: "http://instagram.com/p/p55_8EyNKw/",
