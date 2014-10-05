@@ -1,32 +1,16 @@
-generate
+<%= select_tag(:dress_code, options_for_select(@dress_codes_uniq)) %>
+
 <p id="notice"><%= notice %></p>
 
- <% if @outfit.has_key?("top") %>
-<p>
-  <strong>Top:</strong>
-  <img src="<%= @outfit["top"][:img_url] %>" />
-</p>
-
-<p>
-  <strong>Bottom:</strong>
-  <img src="<%= @outfit["bottom"][:img_url] %>" />
-</p>
+<% if @outfit.has_key?("top") %>
+  <strong>Top:</strong><img src="<%= @outfit["top"][:img_url] %>" /><br>
+  <strong>Bottom:</strong><img src="<%= @outfit["bottom"][:img_url] %>" /><br>
 <% else %>
-<p>
-  <strong>One piece:</strong>
-  <img src="<%= @outfit["one_piece"][:img_url] %>" />
-</p>
+  <strong>One piece:</strong><img src="<%= @outfit["one_piece"][:img_url] %>" /><br>
 <% end %>
-<p>
-  <strong>Shoes:</strong>
-  <img src="<%= @outfit["shoes"][:img_url] %>" />
+  <strong>Shoes:</strong><img src="<%= @outfit["shoes"][:img_url] %>" /><br>
+  <strong>Accessory:</strong><img src="<%= @outfit["accessory"][:img_url] %>" /><br>
 </p>
 
-<p>
-  <strong>Accessory:</strong>
-  <img src="<%= @outfit["accessory"][:img_url] %>" />
-</p>
-
-
-
-
+<%= link_to("Favorite", ) %>
+<%= link_to("Show Me Another", generate_path) %>
