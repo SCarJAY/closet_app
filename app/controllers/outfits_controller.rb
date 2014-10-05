@@ -64,25 +64,20 @@ class OutfitsController < ApplicationController
 
 
   private
-    def generate
+
+    def set_outfit
       @user = User.find_by(id: session[:user_id])
-      # binding.pry
-      outfit = {}
+      @outfit = {}
       random = rand(1..2)
       if random == 1
-        outfit["top"] = @user.items.where(category: "top").sample
-        outfit["bottom"] = @user.items.where(category: "bottom").sample
+        @outfit["top"] = @user.items.where(category: "top").sample
+        @outfit["bottom"] = @user.items.where(category: "bottom").sample
       else
-        outfit["one_piece"] = @user.items.where(category: "one piece").sample
+        @outfit["one_piece"] = @user.items.where(category: "one piece").sample
       end
-      outfit["accessory"] = @user.items.where(category: "accessory").sample
-      outfit["shoes"] = @user.items.where(category: "shoes").sample
-      outfit
-    end
-
-    # Use callbacks to share common setup or constraints between actions.
-    def set_outfit
-      @outfit = generate
+      @outfit["accessory"] = @user.items.where(category: "accessory").sample
+      @outfit["shoes"] = @user.items.where(category: "shoes").sample
+      @outfit
     end
 
     # Never trust parameters from the scary internet, only allow the white list through.

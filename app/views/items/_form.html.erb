@@ -22,7 +22,7 @@
   </div>
   <div class="field">
     <%= f.label :category %><br>
-    <%= f.text_field :category %>
+    <%= f.select :category, [['top'],['bottom'],['one piece'],['shoes'],['accessory']] %>
   </div>
   <div class="field">
     <%= f.label :color %><br>
@@ -38,15 +38,11 @@
   </div>
   <div class="field">
     <%= f.label :dress_code %><br>
-    <%= f.text_field :dress_code %>
+    <%= f.select :dress_code, [['work'],['school'],['date night'],['night out'],['lounge'],['casual']] %>
   </div>
   <div class="field">
     <%= f.label :purchased_from %><br>
     <%= f.text_field :purchased_from %>
-  </div>
-  <div class="field">
-    <%= f.label :user_id %><br>
-    <%= f.text_field :user_id %>
   </div>
   <div class="actions">
     <%= f.submit %>

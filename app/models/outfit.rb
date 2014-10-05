@@ -14,4 +14,5 @@ class Outfit < ActiveRecord::Base
   has_many :cameos
   has_many :items, through: :cameos
   validates_presence_of :name
+
 end
