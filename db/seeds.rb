@@ -293,6 +293,7 @@ color: "rose gold",
 size: "one size",
 brand: "Catbird",
 purchased_from: "Catbird"
+)
 
 sm_item13 = Item.create(
 img_url: "https://catbirdnyc.com/shop/images/T/bars_earrings.jpg",
@@ -303,6 +304,7 @@ color: "rose gold",
 size: "one size",
 brand: "Catbird",
 purchased_from: "Catbird"
+)
 
 sm_item14 = Item.create(
 img_url: "http://thingd-media-ec3.thefancy.com/default/398141766869455723_a044ef62af06.jpg",
@@ -313,6 +315,7 @@ color: "cognac",
 size: "one size",
 brand: "Madewell",
 purchased_from: "Madewell"
+)
 
 sm_item15 = Item.create(
 img_url: "http://images.urbanoutfitters.com/is/image/UrbanOutfitters/32317984_040_d?$xlarge$&defaultImage=",
@@ -323,6 +326,7 @@ color: "black",
 size: "one size",
 brand: "Urban Outfitters",
 purchased_from: "Urban Outfitters"
+)
 
 sm_item1.user_id = sm.id
 sm_item2.user_id = sm.id
