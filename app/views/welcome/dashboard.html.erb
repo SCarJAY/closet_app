@@ -1,0 +1,5 @@
+<p>Welcome, <%= @user.name %>!</p>
+
+<div><%= link_to("Dress Me Up!", generate_path(user_id: @user.id)) %></div>
+<div><%= link_to("Show Fav Outfits!", user_outfits_path(user_id: @user.id)) %></div>
+<div><%= link_to("Show Me My Closet!", user_items_path(user_id: @user.id)) %></div>

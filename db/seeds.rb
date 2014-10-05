@@ -218,4 +218,3 @@ jf_item4 = Item.create(
     jf_item4.user_id = jf.id
     jf_item4.save
 
-

@@ -2,7 +2,7 @@
 
 <p>
   <strong>Img url:</strong>
-  <%= @item.img_url %>
+  <img src="<%= @item.img_url %>">
 </p>
 
 <p>
@@ -31,14 +31,12 @@
 </p>
 
 <p>
-  <strong>Purchased from:</strong>
+  <strong>Purchased From:</strong>
   <%= @item.purchased_from %>
 </p>
 
-<p>
-  <strong>User:</strong>
-  <%= @item.user %>
-</p>
+<%= link_to("Edit", edit_user_item_path(@item.user_id, @item.id)) %>
+<%= link_to("Back", user_items_path) %>
+<%= button_to("Delete", user_item_path, :method => :delete) %>
 
-<%= link_to 'Edit', edit_item_path(@item) %> |
-<%= link_to 'Back', items_path %>
+
