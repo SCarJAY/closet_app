@@ -1,4 +1,6 @@
 <%= render 'layouts/header' %>
+<center>
+
 <body class = "closet">
 
 <p id="notice"><%= notice %></p>
@@ -10,7 +12,7 @@
 </p>
 
 <p>
-  <img src="<%= @item.img_url %>">
+  <img src="<%= @item.img_url %>" style="max-height: 400px; max-width: 400px;">
 </p>
 
 
@@ -45,4 +47,4 @@
 <%= button_to("Delete", user_item_path, :method => :delete) %>
 
 </body>
-
+</center>

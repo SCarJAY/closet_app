@@ -11,5 +11,10 @@ class WelcomeController < ApplicationController
 
   def dashboard
     @user = User.find(params[:id])
+    @state = @user.state
+    @city = @user.city.gsub(" ", "_")
+    @weather = HTTParty.get("http://api.wunderground.com/api/01e9e4537e7c1093/conditions/q/#{@state}/#{@city}.json")
   end
+
+
 end
