@@ -34,6 +34,8 @@ Rails.application.routes.draw do
 
   get 'users/:user_id/outfits/generate' => 'outfits#generate', as: :generate
 
+  get '/about' => 'welcome#about'
+
   # Example resource route (maps HTTP verbs to controller actions automatically):
   #   resources :products
 

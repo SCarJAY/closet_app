@@ -1,14 +1,17 @@
 <%= render 'layouts/header' %>
-
+<body class="outfits">
 <%= @outfit.name %>
   <ul>
     <% @outfit.cameos.each do |cameo| %>
       <li>
         <%= Item.find(cameo.item_id).name %><br>
-        <img src="<%= Item.find(cameo.item_id).img_url %>">
+        <img src="<%= Item.find(cameo.item_id).img_url %>" style="max-height: 400px; max-width: 400px;">
       </li>
     <% end %>
 </ul>
 <br>
 <%= link_to("Back", user_outfits_path) %>
 <%= button_to("Delete", user_outfit_path, :method => :delete) %>
+</body>
+
+
