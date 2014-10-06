@@ -1,5 +1,5 @@
 <%= render 'layouts/header' %>
-
+<body class="outfits">
 <%= @outfit.name %>
   <ul>
     <% @outfit.cameos.each do |cameo| %>
@@ -12,3 +12,4 @@
 <br>
 <%= link_to("Back", user_outfits_path) %>
 <%= button_to("Delete", user_outfit_path, :method => :delete) %>
+</body>

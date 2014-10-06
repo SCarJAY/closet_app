@@ -694,11 +694,13 @@ jf_item13 = Item.create(
  jf_item13.save
 
 sm = User.create(
-  name: "Sarah",
-  email: "p.sweetpotato@gmail.com",
-  password: "potatoes4eva",
-  city: "Brooklyn",
-  state: "NY")
+
+name: "Sarah",
+email: "p.sweetpotato@gmail.com",
+password: "potatoes4eva",
+city: "Brooklyn",
+state: "NY",
+role: "client")
 
 sm_item1 = Item.create(
   img_url: "http://www.allensboots.com/photos/boots/frye/womens-cognac-courtney-71065cog.50770.1.2505x1356.jpg",
