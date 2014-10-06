@@ -1,5 +1,5 @@
 <%= render 'layouts/header' %>
-
+<body class="outfits">
 <h1><%= @user.name %>'s Fav Outfits</h1>
 
 <table>
@@ -24,3 +24,4 @@
 <br>
 <br>
 <%= link_to("Back to Dashboard", dashboard_path(id: @user.id)) %>
+</body>

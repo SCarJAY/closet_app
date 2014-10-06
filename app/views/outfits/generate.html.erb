@@ -10,13 +10,13 @@
   <%= link_to("Back to Dashboard", dashboard_path(id: @user.id)) %>
 <% else %>
   <% if @new_outfit_top %>
-    <strong>Top:</strong><img src="<%= @new_outfit_top[:img_url] %>" /><br>
-    <strong>Bottom:</strong><img src="<%= @new_outfit_bottom[:img_url] %>" /><br>
+    <strong>Top:</strong><img src="<%= @new_outfit_top[:img_url] %>" style="max-height: 400px; max-width: 400px;"/><br>
+    <strong>Bottom:</strong><img src="<%= @new_outfit_bottom[:img_url] %>" style="max-height: 400px; max-width: 400px;" /><br>
   <% else %>
-    <strong>One piece:</strong><img src="<%= @new_outfit_onepiece[:img_url] %>" /><br>
+    <strong>One piece:</strong><img src="<%= @new_outfit_onepiece[:img_url] %>" style="max-height: 400px; max-width: 400px;"/><br>
   <% end %>
-  <strong>Shoes:</strong><img src="<%= @new_outfit_shoes[:img_url] %>" /><br>
-  <strong>Accessory:</strong><img src="<%= @new_outfit_accessory[:img_url] %>" /><br>
+  <strong>Shoes:</strong><img src="<%= @new_outfit_shoes[:img_url] %>" style="max-height: 400px; max-width: 400px;"/><br>
+  <strong>Accessory:</strong><img src="<%= @new_outfit_accessory[:img_url] %>" style="max-height: 400px; max-width: 400px;"/><br>
 
   <%= form_tag(new_user_outfit_path, method: "get") do %>
     <% if @new_outfit_onepiece %>
