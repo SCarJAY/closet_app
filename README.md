@@ -13,18 +13,6 @@ Closetap allows you to catalog & inventory the items in your closet, categorizin
 Create an account with Closetap to browse your closet, check the weather and see what to wear today, generate a random outfit, and save cute outfits for another occasion.
 
 
-
-##Technologies Used:
-* Ruby 2.1.2
-* Rails 4.1.6
-* Httparty
-* Capybara
-* Cucumber
-* Launchy 2.4.2
-* Rspec-rails 3.0.0
-* Shoulda-Matchers
-* Bootstrap 3.2.0
-
 ##User Stories
 
 A user should be able to log in if they already have an account or sign up for a new account if they do not already have one.
@@ -51,6 +39,16 @@ Developed By: Sarah McDonald, Carrie Xu, Jessica Franko, Adesuwa Ugbogbo, & Yina
 
 ![alt tag](https://github.com/yinansong/closet_app/blob/master/wireframe.png)
 
+##Technologies Used:
+* Ruby 2.1.2
+* Rails 4.1.6
+* Httparty
+* Capybara
+* Cucumber
+* Launchy 2.4.2
+* Rspec-rails 3.0.0
+* Shoulda-Matchers
+* Bootstrap 3.2.0
 
 ##Developed with Love by:
 Yinan Song
