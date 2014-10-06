@@ -15,7 +15,7 @@ background-size: cover;
 color: white
 }
 
-.models{
+.shoes{
 background: url(http://i61.tinypic.com/13z1lxt.jpg) no-repeat center center fixed;
 -webkit-background-size: cover;
 -moz-background-size: cover;
@@ -35,6 +35,10 @@ color: white
 
 p.black{
   color: black
+}
+
+p.red{
+  color: #FF0000
 }
 
 body {
@@ -121,6 +125,7 @@ margin-top:30px;
 .dashboard{
   padding: 40px;
   background: transparent;
+  border-color: white
 }
 
 .center {
