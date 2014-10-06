@@ -1,4 +1,4 @@
-
+<body class ="closet">
 <%= form_for [@user, @item] do |f| %>
   <% if @item.errors.any? %>
     <div id="error_explanation">
@@ -48,3 +48,4 @@
     <%= f.submit %>
   </div>
 <% end %>
+</body>

@@ -15,6 +15,16 @@ background-size: cover;
 color: white
 }
 
+.models{
+background: url(http://i61.tinypic.com/13z1lxt.jpg) no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+color: white
+
+}
+
 
 body {
 -webkit-background-size: cover;
@@ -97,6 +107,18 @@ margin-top:30px;
         box-shadow: 0 10px 20px rgba(0,0,0,.7);
 }
 
+.dashboard{
+  padding: 40px;
+  background: transparent;
+}
+
+.center {
+  text-align: center;
+}
+
+a:hover{
+  text-decoration: none
+}
 /**/
 
 
