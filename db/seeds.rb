@@ -500,7 +500,7 @@ cx_item13 = Item.create(
  cx_item13.save
 
 
-jf = u2 = User.create(
+jf = User.create(
   name: "jessfranko",
   email: "jess@ga.co",
   password: "password",
