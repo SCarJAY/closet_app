@@ -16,9 +16,9 @@ end
 
 When(/^I sign up$/) do
   fill_in 'Name', :with => 'Testy'
-  fill_in 'Email', :with => 'test8@example.com'
+  fill_in 'Email', :with => 'test12@example.com'
   fill_in 'Password', :with => 'testpass'
   fill_in 'City', :with => 'Textville'
   fill_in 'State', :with => 'Test York'
-  click_button 'Create User'
+  click_button('Create User')
 end
