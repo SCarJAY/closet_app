@@ -1,5 +1,5 @@
 <%= render 'layouts/header' %>
-
+<body class = "outfits">
 <% if !@selected_dress_code %>
   <h3>What are you dressing up for today?</h3>
   <%= form_tag(generate_path, method: "get") do %>
@@ -32,3 +32,4 @@
   <%= link_to("Dislike & Show Me Another", generate_path) %><br>
   <%= link_to("Back", dashboard_path(id: @user.id)) %>
 <% end %>
+</body>
