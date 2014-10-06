@@ -61,7 +61,7 @@ class ItemsController < ApplicationController
        def set_item
        @user = User.find_by(id: params[:user_id])
        @item = @user.items.find(params[:id])
-    end
+      end
 
     def item_params
       params.require(:item).permit(:img_url, :name, :category, :color, :size, :brand, :dress_code, :purchased_from, :user_id)

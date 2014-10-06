@@ -85,7 +85,7 @@ class UsersController < ApplicationController
       :password,
       :password_confirmation
     )
-  end
+    end
 
   def load_user
     @user = User.find_by(id: params[:id])
