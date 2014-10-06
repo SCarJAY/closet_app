@@ -11,7 +11,7 @@ Rails.application.routes.draw do
   end
 
   resources :users do
-    resources :outfits, only: [:index, :create, :destroy] do
+    resources :outfits, only: [:index, :new, :create, :destroy, :show] do
       collection do
         match 'generate', :via => [:get, :post]
       end
