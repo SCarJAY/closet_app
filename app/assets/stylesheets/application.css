@@ -55,6 +55,10 @@ font-family: 'Shadows Into Light', cursive;
 font-size: 18px
 }
 
+p.large{
+  font-size: 400px
+}
+
 body {
 -webkit-background-size: cover;
 -moz-background-size: cover;

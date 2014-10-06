@@ -1,9 +1,10 @@
 <%= render 'layouts/header' %>
 <body class = "outfits">
 <% if !@selected_dress_code %>
+<br/>
   <h3>What are you dressing up for today?</h3>
   <%= form_tag(generate_path, method: "get") do %>
-    <%= select_tag(:dress_code, options_for_select(@dress_codes_uniq)) %>
+    <%= select_tag(:dress_code, options_for_select([@dress_codes_uniq {:class => "bigger"}])) %>
     <%= submit_tag("Let's Go!") %>
   <% end %>
   <%= link_to("Back to Dashboard", dashboard_path(id: @user.id)) %>
