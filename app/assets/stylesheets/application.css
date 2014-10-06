@@ -139,8 +139,11 @@ margin-top:30px;
 
 .dashboard{
   padding: 40px;
-  background: transparent;
-  border-color: white
+  margin: 60px 20px;
+  font-size: 30px;
+  background: rgba(255,255,255,0.4);
+  border-color: rgba(255,255,255,0.6);
+  border-radius: 10px;
 }
 
 .center {
@@ -151,7 +154,6 @@ a:hover{
   text-decoration: none
 }
 /**/
-
 
 
 body {
@@ -204,6 +206,10 @@ h6 {
     text-transform: uppercase;
     font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
     font-weight: 700;
+}
+
+h1 {
+  padding-top: 10px;
 }
 
 .img-centered {
@@ -329,6 +335,9 @@ fieldset[disabled] .btn-xl.active {
     color: #fed136;
 }
 
+.image{
+  width: 180px
+}
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus,
 .navbar-default .navbar-brand:active,
@@ -425,7 +434,7 @@ header {
 }
 
 header .intro-text {
-    padding-top: 100px;
+    padding-top: 50px;
     padding-bottom: 50px;
 }
 
@@ -523,3 +532,12 @@ body {
     webkit-tap-highlight-color: #fed136;
 }
 
+.menu_bar {
+  float:right;
+  padding: 2% 3% 2% 3%;
+
+}
+
+.left{
+  float:left;
+}
