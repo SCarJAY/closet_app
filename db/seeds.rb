@@ -4,7 +4,8 @@ user_aa = User.create(
   email: "ade@ga.co",
   password: "ihaertga",
   city: "New York",
-  state: "NY")
+  state: "NY",
+  role: "admin")
 
 aa_item1 = Item.create(
   img_url: "http://assets.matchesfashion.com/products/WOGJ4D860002BKM_1_large.jpg",
@@ -330,7 +331,8 @@ cx = User.create(
   email: "carrie@ga.co",
   password: "lovesfood",
   city: "New York",
-  state: "NY")
+  state: "NY",
+  role: "admin")
 
 cx_item1 = Item.create(
   img_url: "http://instagram.com/p/p55_8EyNKw/",
@@ -493,7 +495,8 @@ jf = u2 = User.create(
   email: "jess@ga.co",
   password: "password",
   city: "New Jersey",
-  state: "NJ")
+  state: "NJ",
+  role: "client")
 
 jf_item1 = Item.create(
   img_url: "https://item2.tradesy.com/r/4d05e90b08b29183be526f3c77dcc21030ef12c95bfa76d9ab7149d6cbfdc65f/355/355/dresses/bcbg/2-xs/bcbg-rompers-jumpsuits-1207826.jpg",
