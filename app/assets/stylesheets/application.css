@@ -25,6 +25,15 @@ color: white
 
 }
 
+.outfits{
+background: url(http://i61.tinypic.com/2zf4ya8.jpg) no-repeat center center fixed;
+-webkit-background-size: cover;
+-moz-background-size: cover;
+-o-background-size: cover;
+background-size: cover;
+color: white
+}
+
 .field{
   color: black
 }
