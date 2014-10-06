@@ -1,5 +1,6 @@
 <%= render 'layouts/header' %>
 <body class = "outfits">
+
 <% if !@selected_dress_code %>
 <br/>
   <h3>What are you dressing up for today?</h3>
@@ -17,7 +18,6 @@
   <% end %>
   <strong>Shoes:</strong><img src="<%= @new_outfit_shoes[:img_url] %>" style="max-height: 400px; max-width: 400px;"/><br>
   <strong>Accessory:</strong><img src="<%= @new_outfit_accessory[:img_url] %>" style="max-height: 400px; max-width: 400px;"/><br>
-
   <%= form_tag(new_user_outfit_path, method: "get") do %>
     <% if @new_outfit_onepiece %>
       <% hidden_field_tag "item_id", @new_outfit_onepiece[:id]%>
@@ -33,4 +33,5 @@
   <%= link_to("Dislike & Show Me Another", generate_path) %><br>
   <%= link_to("Back", dashboard_path(id: @user.id)) %>
 <% end %>
+
 </body>
