@@ -1,5 +1,11 @@
-<p>Welcome, <%= @user.name %>!</p>
+<%= render 'layouts/header' %>
+<body class ="shoes">
+<h1>Welcome, <%= @user.name %>!</h1>
 
-<div><%= link_to("Dress Me Up!", generate_path(user_id: @user.id)) %></div>
-<div><%= link_to("Show Fav Outfits!", user_outfits_path(user_id: @user.id)) %></div>
-<div><%= link_to("Show Me My Closet!", user_items_path(user_id: @user.id)) %></div>
+<div class = "center">
+<button class = "dashboard"><strong><%= link_to("Dress Me Up!", generate_path(user_id: @user.id)) %></strong></button>
+<button class = "dashboard"><strong><%= link_to("Show Fav Outfits!", user_outfits_path(user_id: @user.id)) %></strong></button>
+<button class = "dashboard"><strong><%= link_to("Show Me My Closet!", user_items_path(user_id: @user.id)) %></strong></button>
+<button class = "dashboard"><strong><%= link_to("View My Profile!", user_path(user_id: @user.id)) %></button></strong>
+</div>
+</body>

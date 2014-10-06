@@ -1,26 +1,35 @@
 Rails.application.routes.draw do
+  # You can have the root of your site routed with "root"
+  root "welcome#index"
 
-  resources :session, only: [:new, :create, :destroy]
+  get "/login" => "sessions#new"
+
+  resource  :session, only: [:create, :destroy]
 
   resources :users do
     resources :items
   end
 
   resources :users do
-    resources :outfits, only: [:index, :create, :show, :destroy]
+    resources :outfits, only: [:index, :new, :create, :destroy, :show] do
+      collection do
+        match 'generate', :via => [:get, :post]
+      end
+    end
   end
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
-  # You can have the root of your site routed with "root"
-  root 'welcome#index'
 
   # Example of regular route:
   #   get 'products/:id' => 'catalog#view'
 
   # Example of named route that can be invoked with purchase_url(id: product.id)
     # get 'products/:id/purchase' => 'catalog#purchase', as: :purchase
+
+
   get 'users/:id/dashboard' => 'welcome#dashboard', as: :dashboard
 
   get 'users/:user_id/outfits/generate' => 'outfits#generate', as: :generate
