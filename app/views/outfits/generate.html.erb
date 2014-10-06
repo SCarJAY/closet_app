@@ -1,8 +1,12 @@
+<%= render 'layouts/header' %>
+
 <% if !@selected_dress_code %>
+  <h3>What are you dressing up for today?</h3>
   <%= form_tag(generate_path, method: "get") do %>
     <%= select_tag(:dress_code, options_for_select(@dress_codes_uniq)) %>
     <%= submit_tag("Let's Go!") %>
   <% end %>
+  <%= link_to("Back to Dashboard", dashboard_path(id: @user.id)) %>
 <% else %>
   <% if @new_outfit_top %>
     <strong>Top:</strong><img src="<%= @new_outfit_top[:img_url] %>" /><br>
@@ -25,5 +29,6 @@
     <%= submit_tag("Like") %>
   <% end %>
 
-  <%= link_to("Dislike & Show Me Another", generate_path) %>
+  <%= link_to("Dislike & Show Me Another", generate_path) %><br>
+  <%= link_to("Back", dashboard_path(id: @user.id)) %>
 <% end %>
