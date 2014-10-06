@@ -12,6 +12,18 @@
   <% end %>
   <strong>Shoes:</strong><img src="<%= @new_outfit["shoes"][:img_url] %>" /><br>
   <strong>Accessory:</strong><img src="<%= @new_outfit["accessory"][:img_url] %>" /><br>
-  <%= link_to("Favorite", ) %>
-  <%= link_to("Show Me Another", generate_path) %>
+
+  <%= form_tag(new_user_outfit_path, method: "get") do %>
+    <% if @new_outfit["one_piece"] %>
+      <% hidden_field_tag "item_id", @new_outfit["one_piece"][:id]%>
+    <% else %>
+      <% hidden_field_tag "item_id", @new_outfit["top"][:id]%>
+      <% hidden_field_tag "item_id", @new_outfit["bottom"][:id]%>
+    <% end %>
+    <% hidden_field_tag "item_id", @new_outfit["shoes"][:id]%>
+    <% hidden_field_tag "item_id", @new_outfit["accessory"][:id]%>
+    <%= submit_tag("Like") %>
+  <% end %>
+
+  <%= link_to("Dislike & Show Me Another", generate_path) %>
 <% end %>
