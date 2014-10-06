@@ -12,7 +12,10 @@ Closetap allows you to catalog & inventory the items in your closet, categorizin
 Create an account with Closetap to browse your closet, check the weather and see what to wear today, generate a random outfit, and save cute outfits for another occasion.
 
 
+###ERD
 ![alt tag](https://github.com/yinansong/closet_app/blob/master/closetap_erd.png)
+
+###Wireframe
 
 ![alt tag](https://github.com/yinansong/closet_app/blob/master/wireframe.png)
 
