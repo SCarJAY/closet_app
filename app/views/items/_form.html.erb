@@ -13,39 +13,47 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :img_url %><br>
+    <p class="white"><%= f.label :img_url %></p>
     <%= f.text_field :img_url %>
   </div>
+  <br/>
   <div class="field">
-    <%= f.label :name %><br>
+    <p class="white"><%= f.label :name %></p>
     <%= f.text_field :name %>
   </div>
+  <br/>
   <div class="field">
-    <%= f.label :category %><br>
+    <p class="white"><%= f.label :category %></p>
     <%= f.select :category, [['top'],['bottom'],['one piece'],['shoes'],['accessory']] %>
   </div>
+  <br/>
   <div class="field">
-    <%= f.label :color %><br>
+    <p class="white"><%= f.label :color %></p>
     <%= f.text_field :color %>
   </div>
+  <br/>
   <div class="field">
-    <%= f.label :size %><br>
+    <p class="white"><%= f.label :size %></p>
     <%= f.text_field :size %>
   </div>
+  <br/>
   <div class="field">
-    <%= f.label :brand %><br>
+    <p class="white"><%= f.label :brand %></p>
     <%= f.text_field :brand %>
   </div>
+  <br/>
   <div class="field">
-    <%= f.label :dress_code %><br>
+    <p class="white"><%= f.label :dress_code %></p>
     <%= f.select :dress_code, [['work'],['school'],['date night'],['night out'],['lounge'],['casual']] %>
   </div>
+  <br/>
   <div class="field">
-    <%= f.label :purchased_from %><br>
+    <p class="white"><%= f.label :purchased_from %></p>
     <%= f.text_field :purchased_from %>
   </div>
+  <br/>
   <div class="actions">
-    <%= f.submit %>
+    <p class = "black"><%= f.submit %></p>
   </div>
 <% end %>
 </body>

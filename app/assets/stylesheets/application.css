@@ -25,6 +25,17 @@ color: white
 
 }
 
+.field{
+  color: black
+}
+
+p.white{
+color: white
+}
+
+p.black{
+  color: black
+}
 
 body {
 -webkit-background-size: cover;
