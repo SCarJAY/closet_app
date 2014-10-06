@@ -1,4 +1,5 @@
 #Closétap
+###Logo
 ![alt tag](https://github.com/yinansong/closet_app/blob/master/logo2.png)
 
 ###About
@@ -12,6 +13,8 @@ Create an account with Closetap to browse your closet, check the weather and see
 
 
 ![alt tag](https://github.com/yinansong/closet_app/blob/master/closetap_erd.png)
+
+![alt tag](https://github.com/yinansong/closet_app/blob/master/wireframe.jpg)
 
 
 ###Developed with Love by:
