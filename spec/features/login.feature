@@ -13,4 +13,5 @@ describe "the log in process", :type => :feature do
       click_button 'Login'
     expect(page).to have_content 'Testy'
   end
+
 end

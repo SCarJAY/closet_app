@@ -42,6 +42,7 @@ group :development, :test do
   gem 'pry'
   gem 'annotate'
   gem 'capybara'
+  gem 'cucumber-rails', :require => false
 end
 
 group :test do
