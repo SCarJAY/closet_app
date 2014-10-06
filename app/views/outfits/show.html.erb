@@ -1,0 +1,10 @@
+<%= @outfit.name %>
+  <ul>
+    <% @outfit.cameos.each do |cameo| %>
+      <li>
+        <%= Item.find(cameo.item_id).name %><br>
+        <img src="<%= Item.find(cameo.item_id).img_url %>">
+      </li>
+    <% end %>
+  </ul>
+<%= button_to("Delete", user_outfit_path, :method => :delete) %>

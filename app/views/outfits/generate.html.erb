@@ -4,14 +4,26 @@
     <%= submit_tag("Let's Go!") %>
   <% end %>
 <% else %>
-  <% if @new_outfit.has_key?("top") %>
-    <strong>Top:</strong><img src="<%= @new_outfit["top"][:img_url] %>" /><br>
-    <strong>Bottom:</strong><img src="<%= @new_outfit["bottom"][:img_url] %>" /><br>
+  <% if @new_outfit_top %>
+    <strong>Top:</strong><img src="<%= @new_outfit_top[:img_url] %>" /><br>
+    <strong>Bottom:</strong><img src="<%= @new_outfit_bottom[:img_url] %>" /><br>
   <% else %>
-    <strong>One piece:</strong><img src="<%= @new_outfit["one_piece"][:img_url] %>" /><br>
+    <strong>One piece:</strong><img src="<%= @new_outfit_onepiece[:img_url] %>" /><br>
   <% end %>
-  <strong>Shoes:</strong><img src="<%= @new_outfit["shoes"][:img_url] %>" /><br>
-  <strong>Accessory:</strong><img src="<%= @new_outfit["accessory"][:img_url] %>" /><br>
-  <%= link_to("Favorite", ) %>
-  <%= link_to("Show Me Another", generate_path) %>
+  <strong>Shoes:</strong><img src="<%= @new_outfit_shoes[:img_url] %>" /><br>
+  <strong>Accessory:</strong><img src="<%= @new_outfit_accessory[:img_url] %>" /><br>
+
+  <%= form_tag(new_user_outfit_path, method: "get") do %>
+    <% if @new_outfit_onepiece %>
+      <% hidden_field_tag "item_id", @new_outfit_onepiece[:id]%>
+    <% else %>
+      <% hidden_field_tag "item_id", @new_outfit_top[:id]%>
+      <% hidden_field_tag "item_id", @new_outfit_bottom[:id]%>
+    <% end %>
+    <% hidden_field_tag "item_id", @new_outfit_shoes[:id]%>
+    <% hidden_field_tag "item_id", @new_outfit_accessory[:id]%>
+    <%= submit_tag("Like") %>
+  <% end %>
+
+  <%= link_to("Dislike & Show Me Another", generate_path) %>
 <% end %>
