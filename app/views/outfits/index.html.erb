@@ -1,11 +1,15 @@
 <%= render 'layouts/header' %>
+<<<<<<< HEAD
+
+=======
+>>>>>>> 5999cfa94e6dfd8c90ba03c6e2ed223c00f58dd9
 <h1><%= @user.name %>'s Fav Outfits</h1>
 
 <table>
   <thead>
     <tr>
       <th>Outfit Name</th>
-      <th>Created At</th>
+      <th>Added to Your Closet at...</th>
       <th colspan="3"></th>
     </tr>
   </thead>
@@ -20,5 +24,6 @@
     <% end %>
   </tbody>
 </table>
-
 <br>
+<br>
+<%= link_to("Back to Dashboard", dashboard_path(id: @user.id)) %>

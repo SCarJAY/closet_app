@@ -1,8 +1,8 @@
 <header>
-  <div class="home"><span><%= link_to 'Home', root_path %></span></div>
+  <div class="home"><span><%= link_to "Dashboard", root_path %></span></div>
   <div class="profile">
-     <span><%= link_to("Logout", session_path, method: :delete) %></span><br/>
-    <span><%= link_to 'Edit your profile', edit_user_path(current_user) %></span>
+    <span><%= link_to 'Profile', user_path(current_user) %></span><br/>
+    <span><%= link_to("Logout", session_path, method: :delete) %></span>
   </div>
   <hr/>
 </header>

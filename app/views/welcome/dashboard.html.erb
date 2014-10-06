@@ -1,12 +1,17 @@
 <%= render 'layouts/header' %>
+<<<<<<< HEAD
+=======
 <body class ="shoes">
 <h1>Welcome, <%= @user.name %>!</h1>
 <p>It is currently <%= @weather["current_observation"]["temp_f"] %> &deg; in <%= @user.city %>, <%= @user.state %> and <%= @weather["current_observation"]["weather"] %></p>
+>>>>>>> 5999cfa94e6dfd8c90ba03c6e2ed223c00f58dd9
 
-<div class = "center">
-<button class = "dashboard"><strong><%= link_to("Dress Me Up!", generate_path(user_id: @user.id)) %></strong></button>
-<button class = "dashboard"><strong><%= link_to("Show Fav Outfits!", user_outfits_path(user_id: @user.id)) %></strong></button>
-<button class = "dashboard"><strong><%= link_to("Show Me My Closet!", user_items_path(user_id: @user.id)) %></strong></button>
-<button class = "dashboard"><strong><%= link_to("View My Profile!", user_path(user_id: @user.id)) %></button></strong>
-</div>
+<body class ="shoes">
+  <h1>Welcome, <%= @user.name %>!</h1>
+  <div class = "center">
+    <button class = "dashboard"><strong><%= link_to("Dress Me Up!", generate_path(user_id: @user.id)) %></strong></button>
+    <button class = "dashboard"><strong><%= link_to("Show Fav Outfits!", user_outfits_path(user_id: @user.id)) %></strong></button>
+    <button class = "dashboard"><strong><%= link_to("Show Me My Closet!", user_items_path(user_id: @user.id)) %></strong></button>
+    <button class = "dashboard"><strong><%= link_to("View My Profile!", user_path(user_id: @user.id)) %></button></strong>
+  </div>
 </body>
