@@ -7,9 +7,7 @@ Rails.application.routes.draw do
   resource  :session, only: [:create, :destroy]
 
   resources :users do
-    resources :items do
-      resources :cameos, only: [:create, :destroy]
-    end
+    resources :items
   end
 
   resources :users do
@@ -17,7 +15,6 @@ Rails.application.routes.draw do
       collection do
         match 'generate', :via => [:get, :post]
       end
-      resources :cameos, only: [:create, :destroy]
     end
   end
 
