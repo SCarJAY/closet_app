@@ -335,6 +335,9 @@ fieldset[disabled] .btn-xl.active {
     color: #fed136;
 }
 
+.image{
+  width: 180px
+}
 .navbar-default .navbar-brand:hover,
 .navbar-default .navbar-brand:focus,
 .navbar-default .navbar-brand:active,
@@ -431,7 +434,7 @@ header {
 }
 
 header .intro-text {
-    padding-top: 100px;
+    padding-top: 50px;
     padding-bottom: 50px;
 }
 
@@ -533,4 +536,8 @@ body {
   float:right;
   padding: 2% 3% 2% 3%;
 
+}
+
+.left{
+  float:left;
 }
