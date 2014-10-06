@@ -1,37 +1,23 @@
-<h1>Listing outfits</h1>
+<h1><%= @user.name %>'s Fav Outfits</h1>
 
 <table>
   <thead>
     <tr>
-      <th>Dress code</th>
-      <th>Top</th>
-      <th>Bottom</th>
-      <th>One piece</th>
-      <th>Shoes</th>
-      <th>Accessory</th>
-      <th>User</th>
+      <th>Outfit Name</th>
+      <th>Created At</th>
       <th colspan="3"></th>
     </tr>
   </thead>
 
   <tbody>
-    <% @outfits.each do |outfit| %>
+    <% @user.outfits.each do |outfit| %>
       <tr>
-        <td><%= outfit.dress_code %></td>
-        <td><%= outfit.top %></td>
-        <td><%= outfit.bottom %></td>
-        <td><%= outfit.one_piece %></td>
-        <td><%= outfit.shoes %></td>
-        <td><%= outfit.accessory %></td>
-        <td><%= outfit.user %></td>
-        <td><%= link_to 'Show', outfit %></td>
-        <td><%= link_to 'Edit', edit_outfit_path(outfit) %></td>
-        <td><%= link_to 'Destroy', outfit, method: :delete, data: { confirm: 'Are you sure?' } %></td>
+        <td><%= outfit.name %></td>
+        <td><%= outfit.created_at %></td>
+        <td><%= link_to 'Show', user_outfit_path(outfit.user_id, outfit.id) %></td>
       </tr>
     <% end %>
   </tbody>
 </table>
 
 <br>
-
-<%= link_to 'New Outfit', new_outfit_path %>

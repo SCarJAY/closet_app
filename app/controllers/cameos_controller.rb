@@ -1,25 +1,25 @@
 class CameosController < ApplicationController
   before_action :set_cameo, only: [:show, :edit, :update, :destroy]
 
-  # GET /cameos
-  # GET /cameos.json
-  def index
-    @cameos = Cameo.all
-  end
+  # # GET /cameos
+  # # GET /cameos.json
+  # def index
+  #   @cameos = Cameo.all
+  # end
 
-  # GET /cameos/1
-  # GET /cameos/1.json
-  def show
-  end
+  # # GET /cameos/1
+  # # GET /cameos/1.json
+  # def show
+  # end
 
-  # GET /cameos/new
-  def new
-    @cameo = Cameo.new
-  end
+  # # GET /cameos/new
+  # def new
+  #   @cameo = Cameo.new
+  # end
 
-  # GET /cameos/1/edit
-  def edit
-  end
+  # # GET /cameos/1/edit
+  # def edit
+  # end
 
   # POST /cameos
   # POST /cameos.json
@@ -37,19 +37,19 @@ class CameosController < ApplicationController
     end
   end
 
-  # PATCH/PUT /cameos/1
-  # PATCH/PUT /cameos/1.json
-  def update
-    respond_to do |format|
-      if @cameo.update(cameo_params)
-        format.html { redirect_to @cameo, notice: 'Cameo was successfully updated.' }
-        format.json { render :show, status: :ok, location: @cameo }
-      else
-        format.html { render :edit }
-        format.json { render json: @cameo.errors, status: :unprocessable_entity }
-      end
-    end
-  end
+  # # PATCH/PUT /cameos/1
+  # # PATCH/PUT /cameos/1.json
+  # def update
+  #   respond_to do |format|
+  #     if @cameo.update(cameo_params)
+  #       format.html { redirect_to @cameo, notice: 'Cameo was successfully updated.' }
+  #       format.json { render :show, status: :ok, location: @cameo }
+  #     else
+  #       format.html { render :edit }
+  #       format.json { render json: @cameo.errors, status: :unprocessable_entity }
+  #     end
+  #   end
+  # end
 
   # DELETE /cameos/1
   # DELETE /cameos/1.json

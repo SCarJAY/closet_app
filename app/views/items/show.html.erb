@@ -1,14 +1,19 @@
+<%= render 'layouts/header' %>
+<body class = "closet">
+
 <p id="notice"><%= notice %></p>
 
+
 <p>
-  <strong>Img url:</strong>
+  <strong><%= @item.name %></strong>
+
+</p>
+
+<p>
   <img src="<%= @item.img_url %>">
 </p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @item.name %>
-</p>
+
 
 <p>
   <strong>Category:</strong>
@@ -39,4 +44,5 @@
 <%= link_to("Back", user_items_path) %>
 <%= button_to("Delete", user_item_path, :method => :delete) %>
 
+</body>
 

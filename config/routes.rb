@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   # You can have the root of your site routed with "root"
-  root 'welcome#index'
+  root "welcome#index"
 
   get "/login" => "sessions#new"
-  get "/logout" => "sessions#delete"
+
   resource  :session, only: [:create, :destroy]
 
   resources :users do
@@ -11,8 +11,13 @@ Rails.application.routes.draw do
   end
 
   resources :users do
-    resources :outfits, only: [:index, :create, :show, :destroy]
+    resources :outfits, only: [:index, :new, :create, :destroy, :show] do
+      collection do
+        match 'generate', :via => [:get, :post]
+      end
+    end
   end
+
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
