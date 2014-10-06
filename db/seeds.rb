@@ -183,12 +183,6 @@ user_ys = User.create(
   state: "CT",
   role: "client")
 
-user_ys = User.create(
-  name: "yinansong",
-  email: "yinan.e.song@gmail.com",
-  password: "sesameopen",
-  city: "New Haven",
-  state: "CT")
 
 ys_item1 = Item.create(
   img_url: "http://instagram.com/p/tnXdKpOIiY",
