@@ -202,7 +202,6 @@ a.active {
 }
 
 h1,
-h2,
 h3,
 h4,
 h5,
@@ -214,6 +213,12 @@ h6 {
 
 h1 {
   padding-top: 10px;
+}
+
+h2{
+text-transform: uppercase;
+font-family: Montserrat,"Helvetica Neue",Helvetica,Arial,sans-serif;
+font-size: 32px
 }
 
 .img-centered {

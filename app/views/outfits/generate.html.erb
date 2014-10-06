@@ -4,7 +4,7 @@
 <br/>
   <h3>What are you dressing up for today?</h3>
   <%= form_tag(generate_path, method: "get") do %>
-    <%= select_tag(:dress_code, options_for_select([@dress_codes_uniq {:class => "bigger"}])) %>
+    <%= select_tag(:dress_code, options_for_select(@dress_codes_uniq)) %>
     <%= submit_tag("Let's Go!") %>
   <% end %>
   <%= link_to("Back to Dashboard", dashboard_path(id: @user.id)) %>
