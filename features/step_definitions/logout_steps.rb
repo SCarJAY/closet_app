@@ -1,7 +1,7 @@
 Given(/^I am at my dashboard$/) do
   visit login_path
-  fill_in 'Email', :with => 'test15@example.com'
-      fill_in 'Password', :with => 'testpass'
+  fill_in 'Email', :with => 'p.sweetpotato@gmail.com'
+      fill_in 'Password', :with => 'potatoes4eva'
       click_button('Login')
 end
 

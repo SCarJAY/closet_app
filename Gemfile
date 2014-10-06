@@ -46,6 +46,7 @@ group :development, :test do
   gem 'annotate'
   gem 'capybara'
   gem 'cucumber-rails', :require => false
+  gem 'launchy', '~> 2.4.2'
 end
 
 group :test do

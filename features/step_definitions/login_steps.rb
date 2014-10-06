@@ -11,13 +11,13 @@ Given(/^I am at the log in form$/) do
 end
 
 When(/^I log in$/) do
-      fill_in 'Email', :with => 'test16@example.com'
-      fill_in 'Password', :with => 'testpass'
+      fill_in 'Email', :with => 'p.sweetpotota@gmail.com'
+      fill_in 'Password', :with => 'potatoes4eva'
       click_button('Login')
 end
 
 Then(/^I should see my dashboard$/) do
-  expect(page).to have_content("Testy")
+  expect(page).to have_content("Sarah")
 end
 Then(/^I should see the splash page$/) do
   expect(page).to have_css('body')
