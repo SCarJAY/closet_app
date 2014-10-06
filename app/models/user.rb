@@ -1,18 +1,3 @@
-# == Schema Information
-#
-# Table name: users
-#
-#  id              :integer          not null, primary key
-#  name            :string(255)      not null
-#  email           :string(255)      not null
-#  password_digest :string(255)      not null
-#  city            :string(255)      not null
-#  state           :string(255)      not null
-#  role            :string(255)
-#  created_at      :datetime
-#  updated_at      :datetime
-#
-
 class User < ActiveRecord::Base
   has_many :items
   has_many :outfits
@@ -28,12 +13,10 @@ class User < ActiveRecord::Base
     self.role == 'client'
   end
 
-  # define a comparator method for sorting...
-  #
   def <=>(other)
-    if self.role != other.role # sort by role
+    if self.role != other.role
       self.role_value <=> other.role_value
-    else # sort by name
+    else
       self.name <=> other.name
     end
   end
