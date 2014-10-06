@@ -1,3 +1,5 @@
+<%= render 'layouts/header' %>
+
 <% if !@selected_dress_code %>
   <%= form_tag(generate_path, method: "get") do %>
     <%= select_tag(:dress_code, options_for_select(@dress_codes_uniq)) %>
