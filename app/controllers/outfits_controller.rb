@@ -1,10 +1,33 @@
 class OutfitsController < ApplicationController
   before_action :set_outfit, only: [:show, :edit, :update, :destroy]
 
+  def generate
+    @user = User.find_by(id: session[:user_id])
+
+    #create an array of dress code
+    @dress_codes = @user.items.map { |item| item[:dress_code] }
+    @dress_codes_uniq = @dress_codes.uniq
+    @selected_dress_code = params[:dress_code]
+
+    @new_outfit = {}
+    random = rand(1..2)
+    if random == 1
+      @new_outfit["top"] = @user.items.where(dress_code: @selected_dress_code).where(category: "top").sample
+      @new_outfit["bottom"] = @user.items.where(dress_code: @selected_dress_code).where(category: "bottom").sample
+    else
+      @new_outfit["one_piece"] = @user.items.where(dress_code: @selected_dress_code).where(category: "one piece").sample
+    end
+    @new_outfit["accessory"] = @user.items.where(dress_code: @selected_dress_code).where(category: "accessory").sample
+    @new_outfit["shoes"] = @user.items.where(dress_code: @selected_dress_code).where(category: "shoes").sample
+    @new_outfit
+    # binding.pry
+  end
+
   # GET /outfits
   # GET /outfits.json
   def index
-    @outfits = Outfit.all
+    @user = User.find_by(id: session[:user_id])
+    @outfits = @user.outfits
   end
 
   # GET /outfits/1
@@ -62,23 +85,21 @@ class OutfitsController < ApplicationController
   end
 
 
-
   private
-
-    def set_outfit
-      @user = User.find_by(id: session[:user_id])
-      @outfit = {}
-      random = rand(1..2)
-      if random == 1
-        @outfit["top"] = @user.items.where(category: "top").sample
-        @outfit["bottom"] = @user.items.where(category: "bottom").sample
-      else
-        @outfit["one_piece"] = @user.items.where(category: "one piece").sample
-      end
-      @outfit["accessory"] = @user.items.where(category: "accessory").sample
-      @outfit["shoes"] = @user.items.where(category: "shoes").sample
-      @outfit
-    end
+    # def set_outfit
+    #   @user = User.find_by(id: session[:user_id])
+    #   @outfit = {}
+    #   random = rand(1..2)
+    #   if random == 1
+    #     @outfit["top"] = @user.items.where(category: "top").sample
+    #     @outfit["bottom"] = @user.items.where(category: "bottom").sample
+    #   else
+    #     @outfit["one_piece"] = @user.items.where(category: "one piece").sample
+    #   end
+    #   @outfit["accessory"] = @user.items.where(category: "accessory").sample
+    #   @outfit["shoes"] = @user.items.where(category: "shoes").sample
+    #   @outfit
+    # end
 
     # Never trust parameters from the scary internet, only allow the white list through.
     def outfit_params

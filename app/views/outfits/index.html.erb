@@ -1,4 +1,4 @@
-<h1>Listing outfits</h1>
+<h1><%= @user.name %>'s Fav Outfits</h1>
 
 <table>
   <thead>
@@ -15,7 +15,7 @@
   </thead>
 
   <tbody>
-    <% @outfits.each do |outfit| %>
+    <% @user.outfits.each do |outfit| %>
       <tr>
         <td><%= outfit.dress_code %></td>
         <td><%= outfit.top %></td>
@@ -33,5 +33,3 @@
 </table>
 
 <br>
-
-<%= link_to 'New Outfit', new_outfit_path %>
