@@ -1,9 +1,9 @@
 Closet App
 
-Logo Image
+###Logo Image
 ![alt tag](https://github.com/yinansong/closet_app/blob/master/logo2.png)
 
-ERD
+###ERD
 ![alt tag](https://github.com/yinansong/closet_app/blob/master/closetap_erd.png)
 
 
