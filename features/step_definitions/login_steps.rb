@@ -11,7 +11,7 @@ Given(/^I am at the log in form$/) do
 end
 
 When(/^I log in$/) do
-      fill_in 'Email', :with => 'test10@example.com'
+      fill_in 'Email', :with => 'test16@example.com'
       fill_in 'Password', :with => 'testpass'
       click_button('Login')
 end
@@ -20,5 +20,5 @@ Then(/^I should see my dashboard$/) do
   expect(page).to have_content("Testy")
 end
 Then(/^I should see the splash page$/) do
-  expect(page).to have_content('Login')
+  expect(page).to have_css('body')
 end
