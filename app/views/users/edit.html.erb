@@ -1,6 +1,8 @@
+<%= render 'layouts/header' %>
+
 <h1>Editing user</h1>
 
 <%= render 'form' %>
 
-<%= link_to 'Show', @user %> |
-<%= link_to 'Back', users_path %>
+<%= link_to 'Show', @user %>
+<p><span><%= link_to('Back to Home', user_path(current_user)) %></span></p>
