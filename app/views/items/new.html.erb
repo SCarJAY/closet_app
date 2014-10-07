@@ -1,8 +1,11 @@
 <%= render 'layouts/header' %>
 
-<h1>New item</h1>
+<div id="new-item" class="general-page">
+  <h1>New item</h1>
 
-<%= render 'form' %>
+  <%= render 'form' %>
 
-
-<%= link_to 'Back', user_items_path %>
+  <%= link_to(user_items_path, relative: true) do %>
+    <%= image_tag('back-button.png', width: '50', height: '50', alt: 'Back') %>
+  <% end %>
+</div>

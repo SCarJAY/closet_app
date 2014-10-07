@@ -1,13 +1,20 @@
-<h1> About Closétap </h1>
+<body style= "background: url(http://media-cache-ak0.pinimg.com/originals/b5/ec/04/b5ec0411aa9e8694fd870fbf5a2e70a9.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
+  <div id="about-page" class="general-page">
+    <h1> About Closétap </h1>
 
-<p>
-What should I wear tomorrow?  Do I really need another plaid chambray shirt? Does this match? Didn't I throw out those black shoes last winter? What do I even own?? 
+    <p>
+    What should I wear tomorrow?  Do I really need another plaid chambray shirt? Does this match? Didn't I throw out those black shoes last winter? What do I even own?? 
 
-Stop pulling everything out of your closet before that date!
+    Stop pulling everything out of your closet before that date!
 
-Closetap allows you to catalog & inventory the items in your closet, categorizing by description and adding photo images.
+    Closetap allows you to catalog & inventory the items in your closet, categorizing by description and adding photo images.
 
-Create an account with Closetap to browse your closet, check the weather and see what to wear today, generate a random outfit, and save cute outfits for another occasion.
-</p>
+    Create an account with Closetap to browse your closet, check the weather and see what to wear today, generate a random outfit, and save cute outfits for another occasion.
+    </p>
 
-<%= link_to("Home", root_path) %>
+    <%= link_to("Signup", new_user_path) %><br>
+    <%= link_to(root_path, relative: true) do %>
+      <%= image_tag('back-button.png', width: '50', height: '50', alt: 'Back', :class => "cust_button") %>
+    <% end %>
+  </div>
+</body>
