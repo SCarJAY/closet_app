@@ -1,50 +1,49 @@
 <%= render 'layouts/header' %>
 <center>
 
-<body class = "closet">
+  <body class = "closet">
 
-<p id="notice"><%= notice %></p>
-
-
-<p>
-  <strong><%= @item.name %></strong>
-
-</p>
-
-<p>
-  <img src="<%= @item.img_url %>" style="max-height: 400px; max-width: 400px;">
-</p>
+    <p id="notice"><%= notice %></p>
 
 
+    <p>
+      <strong><%= @item.name %></strong>
 
-<p>
-  <strong>Category:</strong>
-  <%= @item.category %>
-</p>
+    </p>
 
-<p>
-  <strong>Color:</strong>
-  <%= @item.color %>
-</p>
+    <p>
+      <img src="<%= @item.img_url %>" style="max-height: 400px; max-width: 400px; border: 1px solid #; -webkit-border-radius: 20px; -moz-border-radius: 20px; border-radius: 20px;">
+    </p>
 
-<p>
-  <strong>Size:</strong>
-  <%= @item.size %>
-</p>
 
-<p>
-  <strong>Brand:</strong>
-  <%= @item.brand %>
-</p>
+    <p>
+      <strong>Category:</strong>
+      <%= @item.category %>
+    </p>
 
-<p>
-  <strong>Purchased From:</strong>
-  <%= @item.purchased_from %>
-</p>
+    <p>
+      <strong>Color:</strong>
+      <%= @item.color %>
+    </p>
 
-<%= link_to("Edit", edit_user_item_path(@item.user_id, @item.id)) %>
-<%= link_to("Back", user_items_path) %>
-<%= button_to("Delete", user_item_path, :method => :delete) %>
+    <p>
+      <strong>Size:</strong>
+      <%= @item.size %>
+    </p>
 
-</body>
+    <p>
+      <strong>Brand:</strong>
+      <%= @item.brand %>
+    </p>
+
+    <p>
+      <strong>Purchased From:</strong>
+      <%= @item.purchased_from %>
+    </p>
+
+    <%= link_to("Edit", edit_user_item_path(@item.user_id, @item.id)) %>
+    <%= link_to("Back", user_items_path) %>
+    <%= button_to("Delete", user_item_path, :method => :delete) %>
+
+  </body>
 </center>

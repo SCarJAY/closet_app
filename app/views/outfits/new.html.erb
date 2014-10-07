@@ -4,4 +4,6 @@
 
 <%= render 'form' %>
 
-<%= link_to 'Back', generate_path %>
+<%= link_to(generate_path, relative: true) do %>
+  <%= image_tag('back-button.png', width: '50', height: '50', alt: 'Back') %>
+<% end %>
