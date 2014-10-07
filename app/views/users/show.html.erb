@@ -1,25 +1,41 @@
-<%= render 'layouts/header' %>
-<p id="notice"><%= notice %></p>
 
-<p>
-  <strong>Name:</strong>
-  <%= @user.name %>
-</p>
+<body style= "background: url(http://media-cache-ak0.pinimg.com/originals/b5/ec/04/b5ec0411aa9e8694fd870fbf5a2e70a9.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
 
-<p>
-  <strong>Email:</strong>
-  <%= @user.email %>
-</p>
+  <%= render 'layouts/header' %>
 
-<p>
-  <strong>City:</strong>
-  <%= @user.city %>
-</p>
+  <div id="user-show" class="general-page">
 
-<p>
-  <strong>State:</strong>
-  <%= @user.state %>
-</p>
+    <h1><%= @user.name %>'s Profile</h1>
 
-<%= link_to 'Edit', edit_user_path(@user) %> |
-<%= link_to 'Back', dashboard_path %>
+    <p id="notice"><%= notice %></p>
+
+    <p>
+      <strong>Name:</strong>
+      <%= @user.name %>
+    </p>
+
+    <p>
+      <strong>Email:</strong>
+      <%= @user.email %>
+    </p>
+
+    <p>
+      <strong>City:</strong>
+      <%= @user.city %>
+    </p>
+
+    <p>
+      <strong>State:</strong>
+      <%= @user.state %>
+    </p>
+
+    <%= link_to(edit_user_path(@user), relative: true) do %>
+      <%= image_tag('pencil-button.png', width: '50', height: '50', alt: 'Back') %>
+    <% end %>
+
+    <%= link_to(dashboard_path, relative: true) do %>
+      <%= image_tag('back-button.png', width: '50', height: '50', alt: 'Back') %>
+    <% end %>
+
+  </div>
+</body>

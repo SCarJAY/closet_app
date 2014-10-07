@@ -1,8 +1,16 @@
-<%= render 'layouts/header' %>
+<body style= "background: url(http://media-cache-ak0.pinimg.com/originals/b5/ec/04/b5ec0411aa9e8694fd870fbf5a2e70a9.jpg) no-repeat center center fixed; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; background-size: cover;">
 
-<h1>Editing user</h1>
+  <%= render 'layouts/header' %>
 
-<%= render 'form' %>
+  <div id="user-edit" class="general-page">
 
-<%= link_to 'Show', @user %>
-<p><span><%= link_to('Back to Home', user_path(current_user)) %></span></p>
+  <h1>Editing user</h1>
+
+  <%= render 'form' %>
+
+  <%= link_to(@user, relative: true) do %>
+    <%= image_tag('back-button.png', width: '50', height: '50', alt: 'Back', :class => "cust_button") %>
+  <% end %>
+
+  </div>
+</body>

@@ -5,9 +5,12 @@
 
   <%= render 'form' %>
 
-  <%= link_to 'Show', user_item_path(@item.user_id, @item.id) %> |
+
+  <%= link_to(user_item_path(@item.user_id, @item.id), relative: true) do %>
+    <%= image_tag('index-button.png', width: '50', height: '50', alt: 'Back', :class => "cust_button") %>
+  <% end %>
 
   <%= link_to(user_items_path, relative: true) do %>
-    <%= image_tag('back-button.png', width: '50', height: '50', alt: 'Back') %>
+    <%= image_tag('back-button.png', width: '50', height: '50', alt: 'Back', :class => "cust_button") %>
   <% end %>
 </div>
