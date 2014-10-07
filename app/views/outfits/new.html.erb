@@ -1,12 +1,11 @@
-<body>
-  <%= render 'layouts/header' %>
-  <id id="new-outfit" class="general-page"
-    <h1>New outfit</h1>
+<%= render 'layouts/header' %>
 
-    <%= render 'form' %>
+<div id="new-outfit" class="general-page">
+  <h1>New Outfit</h1>
 
-    <%= link_to(generate_path, relative: true) do %>
-      <%= image_tag('back-button.png', width: '50', height: '50', alt: 'Back') %>
-    <% end %>
-  </id>
-</body>
+  <%= render 'form' %>
+
+  <%= link_to(generate_path, relative: true) do %>
+    <%= image_tag('back-button.png', width: '50', height: '50', alt: 'Back') %>
+  <% end %>
+</div>
