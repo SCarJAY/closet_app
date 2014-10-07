@@ -1,17 +1,28 @@
 <%= render 'layouts/header' %>
+
 <body class="outfits">
-<%= @outfit.name %>
-  <ul>
-    <% @outfit.cameos.each do |cameo| %>
-      <li>
-        <%= Item.find(cameo.item_id).name %><br>
-        <img src="<%= Item.find(cameo.item_id).img_url %>" style="max-height: 400px; max-width: 400px;">
-      </li>
+  <div id="outfit-show">
+    <h1><%= @outfit.name %></h1>
+    <div class="generate-items">
+        <% @outfit.cameos.each do |cameo| %>
+          <div class="new-outfit-item">
+            <p><strong><%= Item.find(cameo.item_id).name %></strong></p>
+            <img src="<%= Item.find(cameo.item_id).img_url %>">
+            <br>
+            <br>
+          </div>
+        <% end %>
+
+      <div style="clear: both;">
+    </div>
+    <br>
+
+    <%= button_to("Delete", user_outfit_path, :method => :delete) %>
+
+    <%= link_to(user_outfits_path, relative: true) do %>
+      <%= image_tag('back-button.png', width: '50', height: '50', alt: 'Back', padding: '10px', :class => "cust_button") %>
     <% end %>
-</ul>
-<br>
-<%= link_to("Back", user_outfits_path) %>
-<%= button_to("Delete", user_outfit_path, :method => :delete) %>
+  </div>
 </body>
 
 
