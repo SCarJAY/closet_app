@@ -37,6 +37,7 @@ gem 'bcrypt', '~> 3.1.7'
 
 #Use HTTParty for API requests
 gem 'httparty'
+gem 'rails_12factor', group: :production
 
 # Use debugger
 # gem 'debugger', group: [:development, :test]
