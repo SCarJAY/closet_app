@@ -12,26 +12,26 @@
   <% end %>
 
   <div class="field">
-    <%= f.label :name %><br>
+    <%= f.label :name, :class => "user-form-label" %><br>
     <%= f.text_field :name %>
   </div>
   <div class="field">
-    <%= f.label :email %><br>
+    <%= f.label :email, :class => "user-form-label" %><br>
     <%= f.text_field :email %>
   </div>
   <div class="field">
-    <%= f.label :password %><br>
+    <%= f.label :password, :class => "user-form-label" %><br>
     <%= f.password_field :password, :value => nil %>
   </div>
   <div class="field">
-    <%= f.label :city %><br>
+    <%= f.label :city, :class => "user-form-label" %><br>
     <%= f.text_field :city %>
   </div>
   <div class="field">
-    <%= f.label :state %><br>
+    <%= f.label :state, :class => "user-form-label" %><br>
     <%= f.text_field :state %>
   </div>
   <div class="actions">
-    <%= f.submit %>
+    <%= image_submit_tag "ok-button.png", :id => "ok-button", :class => "cust_button"%>
   </div>
 <% end %>

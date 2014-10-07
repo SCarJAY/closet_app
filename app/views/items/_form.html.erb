@@ -13,47 +13,47 @@
   <% end %>
 
   <div class="field">
-    <p class="white"><%= f.label :img_url %></p>
+    <p class="white"><%= f.label :img_url, :class => "item-form-label" %></p>
     <%= f.text_field :img_url %>
   </div>
   <br/>
   <div class="field">
-    <p class="white"><%= f.label :name %></p>
+    <p class="white"><%= f.label :name, :class => "item-form-label"  %></p>
     <%= f.text_field :name %>
   </div>
   <br/>
   <div class="field">
-    <p class="white"><%= f.label :category %></p>
+    <p class="white"><%= f.label :category, :class => "item-form-label"  %></p>
     <%= f.select :category, [['top'],['bottom'],['one piece'],['shoes'],['accessory']] %>
   </div>
   <br/>
   <div class="field">
-    <p class="white"><%= f.label :color %></p>
+    <p class="white"><%= f.label :color, :class => "item-form-label"  %></p>
     <%= f.text_field :color %>
   </div>
   <br/>
   <div class="field">
-    <p class="white"><%= f.label :size %></p>
+    <p class="white"><%= f.label :size, :class => "item-form-label"  %></p>
     <%= f.text_field :size %>
   </div>
   <br/>
   <div class="field">
-    <p class="white"><%= f.label :brand %></p>
+    <p class="white"><%= f.label :brand, :class => "item-form-label"  %></p>
     <%= f.text_field :brand %>
   </div>
   <br/>
   <div class="field">
-    <p class="white"><%= f.label :dress_code %></p>
+    <p class="white"><%= f.label :dress_code, :class => "item-form-label"  %></p>
     <%= f.select :dress_code, [['work'],['school'],['date night'],['night out'],['lounge'],['casual']] %>
   </div>
   <br/>
   <div class="field">
-    <p class="white"><%= f.label :purchased_from %></p>
+    <p class="white"><%= f.label :purchased_from, :class => "item-form-label"  %></p>
     <%= f.text_field :purchased_from %>
   </div>
   <br/>
   <div class="actions">
-    <p class = "black"><%= f.submit %></p>
+    <p class = "black"><%= image_submit_tag "ok-button.png", :id => "ok-button", :class => "cust_button"%></p>
   </div>
 <% end %>
 </body>

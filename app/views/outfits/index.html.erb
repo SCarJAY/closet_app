@@ -1,27 +1,28 @@
 <%= render 'layouts/header' %>
 <body class="outfits">
-<h1><%= @user.name %>'s Fav Outfits</h1>
-
-<table>
-  <thead>
-    <tr>
-      <th>Outfit Name</th>
-      <th>Added to Your Closet at...</th>
-      <th colspan="3"></th>
-    </tr>
-  </thead>
-
-  <tbody>
-    <% @user.outfits.each do |outfit| %>
+  <h1><%= @user.name %>'s Fav Outfits</h1>
+  <table>
+    <thead>
       <tr>
-        <td><%= outfit.name %></td>
-        <td><%= outfit.created_at %></td>
-        <td><%= link_to 'Show', user_outfit_path(outfit.user_id, outfit.id) %></td>
+        <th>Outfit Name</th>
+        <th>Added to Your Closet at...</th>
+        <th colspan="3"></th>
       </tr>
-    <% end %>
-  </tbody>
-</table>
-<br>
-<br>
-<%= link_to("Back to Dashboard", dashboard_path(id: @user.id)) %>
+    </thead>
+
+    <tbody>
+      <% @user.outfits.each do |outfit| %>
+        <tr>
+          <td><%= outfit.name %></td>
+          <td><%= outfit.created_at %></td>
+          <td><%= link_to 'Show', user_outfit_path(outfit.user_id, outfit.id) %></td>
+        </tr>
+      <% end %>
+    </tbody>
+  </table>
+  <br>
+  <br>
+  <%= link_to(dashboard_path(id: @user.id), relative: true) do %>
+    <%= image_tag('back-button.png', width: '50', height: '50', alt: 'Back') %>
+  <% end %>
 </body>

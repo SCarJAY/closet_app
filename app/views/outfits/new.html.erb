@@ -1,7 +1,11 @@
 <%= render 'layouts/header' %>
 
-<h1>New outfit</h1>
+<div id="new-outfit" class="general-page">
+  <h1>New Outfit</h1>
 
-<%= render 'form' %>
+  <%= render 'form' %>
 
-<%= link_to 'Back', generate_path %>
+  <%= link_to(generate_path, relative: true) do %>
+    <%= image_tag('back-button.png', width: '50', height: '50', alt: 'Back') %>
+  <% end %>
+</div>

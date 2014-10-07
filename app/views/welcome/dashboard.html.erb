@@ -1,12 +1,23 @@
 <%= render 'layouts/header' %>
 
 <body class ="shoes">
-<h1>Welcome, <%= @user.name %>!</h1>
+<div id="dashboard-center">
+  <h1>Welcome, <%= @user.name %>!</h1>
   <p>It is currently <%= @weather["current_observation"]["temp_f"] %> &deg; in <%= @user.city %>, <%= @user.state %> and <%= @weather["current_observation"]["weather"] %>
   </p>
   <div class = "center">
-    <button class = "dashboard"><strong><h2><%= link_to("   Dress Me Up!   ", generate_path(user_id: @user.id)) %></h2></strong></button>
-    <button class = "dashboard"><strong><h2><%= link_to(" Show Fave Outfits!", user_outfits_path(user_id: @user.id)) %></h2></strong></button>
-    <button class = "dashboard"><strong><h2><%= link_to("Show Me My Closet!", user_items_path(user_id: @user.id)) %></h2></strong></button>
+    <%= link_to(generate_path(user_id: @user.id), relative: true) do %>
+      <%= image_tag('dress-me-up-button.png', width: '300', alt: 'Dress Me Up') %>
+    <% end %>
+    <%= link_to(user_outfits_path(user_id: @user.id), relative: true) do %>
+      <%= image_tag('show-fav-outfits-button.png', width: '300', alt: 'Shwo Fav Outfits') %>
+    <% end %>
+    <%= link_to(user_items_path(user_id: @user.id), relative: true) do %>
+      <%= image_tag('show-me-my-closet.png', width: '300', alt: 'Show Me My Closet') %>
+    <% end %>
   </div>
+</div>
 </body>
+
+
+

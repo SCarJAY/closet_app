@@ -1,25 +1,27 @@
 <body class ="outfits">
-<%= form_for [@user, @outfit] do |f| %>
-  <% if @outfit.errors.any? %>
-    <div id="error_explanation">
-      <h2><%= pluralize(@outfit.errors.count, "error") %> prohibited this outfit from being saved:</h2>
+  <div id="new-outfit" class="general-page">
+    <%= form_for [@user, @outfit] do |f| %>
+      <% if @outfit.errors.any? %>
+        <div id="error_explanation">
+          <h2><%= pluralize(@outfit.errors.count, "error") %> prohibited this outfit from being saved:</h2>
 
-      <ul>
-      <% @outfit.errors.full_messages.each do |message| %>
-        <li><%= message %></li>
+          <ul>
+          <% @outfit.errors.full_messages.each do |message| %>
+            <li><%= message %></li>
+          <% end %>
+          </ul>
+        </div>
       <% end %>
-      </ul>
-    </div>
-  <% end %>
 
-  <div class="field">
-    <%= f.label :name %><br>
-    <%= f.text_field :name %>
+      <div class="field">
+        <%= f.label :name, :class => "outfit-form-label" %><br>
+        <%= f.text_field :name %>
+      </div>
+
+      <div class="actions">
+        <%= image_submit_tag "ok-button.png", :id => "ok-button", :class => "cust_button"%>
+      </div>
+
+    <% end %>
   </div>
-
-  <div class="actions">
-    <%= f.submit %>
-  </div>
-
-<% end %>
 </body>

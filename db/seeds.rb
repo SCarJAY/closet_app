@@ -1,14 +1,4 @@
-
-
-    # This file should contain all the record creation needed to seed the database with its default values.
-    # The data can then be loaded with the rake db:seed (or created alongside the db with db:setup).
-    #
-    # Examples:
-    #
-    #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
-    #   Mayor.create(name: 'Emanuel', city: cities.first)
-
-    # Ade's
+# Ade's
 user_aa = User.create(
   name: "adesuwau",
   email: "ade@ga.co",
@@ -78,7 +68,7 @@ aa_item6 = Item.create(
   purchased_from: "H&M")
 
 aa_item7 = Item.create(
-  img_url: "http://imgur.com/Gbjtwte",
+  img_url: "http://i.imgur.com/Gbjtwte.jpg?1",
   name: "WDI hoodie",
   category: "top",
   dress_code: "work",
@@ -174,18 +164,18 @@ aa_item12 = Item.create(
  aa_item12.save
  aa_item13.save
 
-    # Yinan's
+
+# Yinan's
 user_ys = User.create(
-  name: "yinansong",
+  name: "Yinan",
   email: "yinan.e.song@gmail.com",
   password: "sesameopen",
   city: "New Haven",
   state: "CT",
   role: "client")
 
-
 ys_item1 = Item.create(
-  img_url: "http://instagram.com/p/tnXdKpOIiY",
+  img_url: "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=70893574",
   name: "Manolo Blahnik Suede Heels",
   category: "shoes",
   dress_code: "night out",
@@ -205,7 +195,7 @@ ys_item2 = Item.create(
   purchased_from: "Calvin Klein")
 
 ys_item3 = Item.create(
-  img_url: "http://instagram.com/p/tFMF9BgUau",
+  img_url: "http://www.uuclothing.com/wp-content/uploads/2012/08/16/women-dress-20120816-66.jpg",
   name: "Silk Layered Dress",
   category: "one piece",
   dress_code: "night out",
@@ -215,7 +205,7 @@ ys_item3 = Item.create(
   purchased_from: "H&M")
 
 ys_item4 = Item.create(
-  img_url: "http://instagram.com/p/gYFPtKoILR",
+  img_url: "http://www.polyvore.com/cgi/img-thing?.out=jpg&size=l&tid=48801311",
   name: "Knot Necklace",
   category: "accessory",
   dress_code: "night out",
@@ -244,7 +234,7 @@ ys_item6 = Item.create(
   purchased_from: "H&M")
 
 ys_item7 = Item.create(
-  img_url: "http://imgur.com/Gbjtwte",
+  img_url: "http://i.imgur.com/Gbjtwte.jpg?1",
   name: "WDI hoodie",
   category: "top",
   dress_code: "work",
@@ -377,7 +367,7 @@ cx_item4 = Item.create(
   purchased_from: "H&M")
 
 cx_item5 = Item.create(
-  img_url: "http://imgur.com/Gbjtwte",
+  img_url: "http://i.imgur.com/Gbjtwte.jpg?1",
   name: "WDI hoodie",
   category: "top",
   dress_code: "work",
@@ -493,7 +483,7 @@ cx_item13 = Item.create(
  cx_item12.save
  cx_item13.save
 
-
+# Jessica's
 jf = User.create(
   name: "jessfranko",
   email: "jess@ga.co",
@@ -553,7 +543,7 @@ jf_item5 = Item.create(
   purchased_from: "Banana Republic")
 
 jf_item6 = Item.create(
-  img_url: "http://imgur.com/Gbjtwte",
+  img_url: "http://i.imgur.com/Gbjtwte.jpg?1",
   name: "WDI hoodie",
   category: "top",
   dress_code: "work",
@@ -690,8 +680,9 @@ jf_item13 = Item.create(
  jf_item12.save
  jf_item13.save
 
-sm = User.create(
+#Sarah's
 
+sm = User.create(
 name: "Sarah",
 email: "p.sweetpotato@gmail.com",
 password: "potatoes4eva",
@@ -850,7 +841,7 @@ sm_item15 = Item.create(
   purchased_from: "Urban Outfitters")
 
 sm_item16 = Item.create(
-  img_url: "http://imgur.com/Gbjtwte",
+  img_url: "http://i.imgur.com/Gbjtwte.jpg?1",
   name: "WDI hoodie",
   category: "top",
   dress_code: "work",
@@ -904,4 +895,3 @@ sm_item17 = Item.create(
   sm_item15.save
   sm_item16.save
   sm_item17.save
-
