@@ -1,10 +1,13 @@
 <%= render 'layouts/header' %>
 
-<h1>Editing item</h1>
+<div id="edit-item">
+  <h1>Editing item</h1>
 
-<%= render 'form' %>
+  <%= render 'form' %>
 
+  <%= link_to 'Show', user_item_path(@item.user_id, @item.id) %> |
 
-<%= link_to 'Show', user_item_path(@item.user_id, @item.id) %> |
-<%= link_to 'Back', user_items_path %>
-
+  <%= link_to(user_items_path, relative: true) do %>
+    <%= image_tag('back-button.png', width: '50', height: '50', alt: 'Back') %>
+  <% end %>
+</div>

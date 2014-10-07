@@ -1,18 +1,23 @@
 <%= render 'layouts/header' %>
 
-<body class = "closet">
-  <div class="container">
-
-  <h1><%= @user.name %>'s closet</h1>
-
-  <div class="polaroid-images">
-  <% @user.items.each do |item| %>
-  <a href="<%= user_item_path(item.user_id, item.id) %>" title="<%= item.name %>"><img height="200" src="<%= item.img_url %>" alt="<%= @user.name %>" title="<%= @user.name %>" /></a>
-  <% end %>
-  </div>
-
-  </div>
-
-  <%= link_to 'New Item', new_user_item_path %>
-  <%= link_to("Return to Dashboard", dashboard_path(id: @user.id)) %>
+<body class="closet">
+  <div id="closet-index">
+    <div class="container">
+      <h1><%= @user.name %>'s closet</h1>
+      <div class="polaroid-images">
+        <% @user.items.each do |item| %>
+        <a href="<%= user_item_path(item.user_id, item.id) %>" title="<%= item.name %>"><img height="200" src="<%= item.img_url %>" alt="<%= @user.name %>" title="<%= @user.name %>" /></a>
+        <% end %>
+      </div>
+    </div>
+    <%= link_to(new_user_item_path, relative: true) do %>
+      <%= image_tag('add-button.png', width: '50', height: '50', alt: 'Add New Item', :class => 'cust_button') %>
+    <% end %>
+    <%= link_to(dashboard_path(id: @user.id), relative: true) do %>
+      <%= image_tag('back-button.png', width: '50', height: '50', alt: 'Add New Item', :class => 'cust_button') %>
+    <% end %>
+    </div>
 </body>
+
+
+
