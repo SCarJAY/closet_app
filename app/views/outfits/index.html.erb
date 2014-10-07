@@ -1,28 +1,21 @@
 <%= render 'layouts/header' %>
 <body class="outfits">
-  <h1><%= @user.name %>'s Fav Outfits</h1>
-  <table>
-    <thead>
-      <tr>
-        <th>Outfit Name</th>
-        <th>Added to Your Closet at...</th>
-        <th colspan="3"></th>
-      </tr>
-    </thead>
-
-    <tbody>
-      <% @user.outfits.each do |outfit| %>
-        <tr>
-          <td><%= outfit.name %></td>
-          <td><%= outfit.created_at %></td>
-          <td><%= link_to 'Show', user_outfit_path(outfit.user_id, outfit.id) %></td>
-        </tr>
-      <% end %>
-    </tbody>
-  </table>
-  <br>
-  <br>
-  <%= link_to(dashboard_path(id: @user.id), relative: true) do %>
-    <%= image_tag('back-button.png', width: '50', height: '50', alt: 'Back') %>
-  <% end %>
+  <div id="outfit-index" class="general-page">
+    <br>
+    <br>
+    <h1><%= @user.name %>'s Fav Outfits</h1>
+    <br>
+    <ul id="outfit-list">
+        <% @user.outfits.each do |outfit| %>
+          <li>
+          <%= link_to outfit.name, user_outfit_path(outfit.user_id, outfit.id) %>
+          </li>
+        <% end %>
+    </ul>
+    <br>
+    <br>
+    <%= link_to(dashboard_path(id: @user.id), relative: true) do %>
+      <%= image_tag('back-button.png', width: '50', height: '50', alt: 'Back', :class => 'cust_button') %>
+    <% end %>
+  </div>
 </body>

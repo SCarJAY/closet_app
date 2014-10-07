@@ -2,12 +2,13 @@
 <body class = "outfits">
 
 <div id="outfit-generate">
-  <div id="generate-items">
+  <div class="generate-items">
   <% if !@selected_dress_code %>
     <br/>
       <h3>What are you dressing up for today?</h3>
       <%= form_tag(generate_path, method: "get") do %>
         <%= select_tag(:dress_code, options_for_select(@dress_codes_uniq), { :style => 'font-size:100px' }) %>
+        <br>
         <%= image_submit_tag "go-button.png", :id => "go-button" %>
       <% end %>
       <%= link_to(dashboard_path(id: @user.id), relative: true) do %>
